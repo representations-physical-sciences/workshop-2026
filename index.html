@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Representations for the Physical Sciences — a NeurIPS 2026 workshop on self-supervision, transfer, sampling, and tokenization.">
+    <meta name="theme-color" content="#f4f1ea">
+    <title>Representations for the Physical Sciences · NeurIPS 2026</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script src="assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="shell header-inner">
+        <a class="wordmark" href="#top" aria-label="Representations for the Physical Sciences, home">
+          <span class="wordmark-mark" aria-hidden="true">R<span>/</span>PS</span>
+          <span class="wordmark-text">Representations<br>for Physical Sciences</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary navigation" data-nav>
+          <a href="#about">About</a>
+          <a href="#call">Call for papers</a>
+          <a href="#speakers">Speakers</a>
+          <a href="#organizers">Organizers</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-button theme-toggle" type="button" aria-label="Switch color theme" data-theme-toggle>
+            <span class="theme-icon theme-icon-light" aria-hidden="true">◐</span>
+            <span class="theme-icon theme-icon-dark" aria-hidden="true">◑</span>
+          </button>
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+            <span>Menu</span>
+            <span class="menu-lines" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation" data-mobile-nav hidden>
+        <a href="#about">About</a>
+        <a href="#call">Call for papers</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#organizers">Organizers</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="shell hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> NeurIPS 2026 workshop · First edition</p>
+            <h1>Representations<br>for the Physical<br>Sciences</h1>
+            <p class="hero-deck">Self-supervision, transfer, sampling, and tokenization for scientific data and physical systems.</p>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#call">Read the call for papers <span aria-hidden="true">↘</span></a>
+              <a class="text-link" href="#reviewers">Join the Program Committee <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+
+          <div class="hero-speakers" aria-label="Confirmed invited speakers">
+            <div class="hero-speakers-heading">
+              <span>Confirmed invited speakers</span>
+              <a href="#speakers">View details <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-speaker-grid">
+              <a class="hero-speaker" href="#speakers">
+                <div class="speaker-photo speaker-photo-small tone-one" aria-hidden="true"><span>SJ</span></div>
+                <strong>Stefanie Jegelka</strong>
+                <span>MIT &amp; TUM</span>
+              </a>
+              <a class="hero-speaker" href="#speakers">
+                <div class="speaker-photo speaker-photo-small tone-two" aria-hidden="true"><span>FL</span></div>
+                <strong>Francesco Locatello</strong>
+                <span>ISTA</span>
+              </a>
+              <a class="hero-speaker" href="#speakers">
+                <div class="speaker-photo speaker-photo-small tone-three" aria-hidden="true"><span>JN</span></div>
+                <strong>Jigyasa Nigam</strong>
+                <span>MIT</span>
+              </a>
+              <a class="hero-speaker" href="#speakers">
+                <div class="speaker-photo speaker-photo-small tone-four" aria-hidden="true"><span>NT</span></div>
+                <strong>Nils Thuerey</strong>
+                <span>TUM</span>
+              </a>
+              <a class="hero-speaker" href="#speakers">
+                <div class="speaker-photo speaker-photo-small tone-five" aria-hidden="true"><span>JV</span></div>
+                <strong>Jean-Philippe Vert</strong>
+                <span>Bioptimus</span>
+              </a>
+              <a class="hero-speaker" href="#speakers">
+                <div class="speaker-photo speaker-photo-small tone-six" aria-hidden="true"><span>MG</span></div>
+                <strong>Mark Girolami</strong>
+                <span>Cambridge</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="shell event-facts" aria-label="Event information">
+          <div class="fact">
+            <span class="fact-label">When</span>
+            <strong>12 or 13 December 2026</strong>
+            <span>Exact workshop day to be announced</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Where</span>
+            <strong>Paris, France</strong>
+            <span>NeurIPS 2026 satellite</span>
+          </div>
+          <div class="fact">
+            <span class="fact-label">Format</span>
+            <strong>One day · In person</strong>
+            <span>Talks, posters, and discussion</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-about" id="about">
+        <div class="shell split-intro">
+          <div>
+            <h2>About the workshop</h2>
+          </div>
+          <div class="intro-copy">
+            <p>Representations turn observations into structured embeddings whose geometry reveals semantic content. In the physical sciences, however, the data are continuous, heterogeneous, dynamical, and constrained by governing laws.</p>
+            <p>This workshop brings together representation-learning researchers and domain scientists to ask how embeddings can remain physically meaningful, transferable, falsifiable, and actionable.</p>
+          </div>
+        </div>
+
+        <div class="shell themes-grid">
+          <article class="theme-card">
+            <h3>Self-supervision</h3>
+            <p>Objectives and augmentations that preserve symmetry, conservation laws, temporal coherence, and scientific meaning.</p>
+            <span class="card-tag">physical constraints</span>
+          </article>
+          <article class="theme-card">
+            <h3>Transfer</h3>
+            <p>Reliable extrapolation into difficult regimes—and methods for verifying predictions when experiments are expensive.</p>
+            <span class="card-tag">out of distribution</span>
+          </article>
+          <article class="theme-card">
+            <h3>Sampling</h3>
+            <p>Closed-loop simulation and experiment design: which rare events, edge cases, or regimes should be generated next?</p>
+            <span class="card-tag">adaptive generation</span>
+          </article>
+          <article class="theme-card">
+            <h3>Tokenization</h3>
+            <p>Discrete vocabularies for continuous, multi-scale, and non-Euclidean systems without losing their mechanics.</p>
+            <span class="card-tag">physical modalities</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-call" id="call">
+        <div class="shell call-grid">
+          <div class="call-heading">
+            <h2>Call for papers</h2>
+            <p>We invite interdisciplinary contributions from core machine learning and every area of AI for science.</p>
+            <a class="button button-paper" href="#" aria-disabled="true">OpenReview link coming soon</a>
+          </div>
+
+          <div class="tracks">
+            <article class="track">
+              <div class="track-heading">
+                <span>Track A</span>
+                <strong>Non-archival</strong>
+              </div>
+              <h3>Short Papers</h3>
+              <p>Four pages excluding references and appendices. Accepted work will be presented as posters, with selected submissions invited for contributed talks.</p>
+            </article>
+            <article class="track">
+              <div class="track-heading">
+                <span>Track B</span>
+                <strong>Optional</strong>
+              </div>
+              <h3>Research Notes</h3>
+              <p>Accessible explanations of open problems, paradigms, datasets, or algorithms. New results are not required; clarity and usefulness are.</p>
+            </article>
+
+            <details class="paper-faq">
+              <summary>
+                <span>
+                  <span class="paper-faq-label">Before you submit</span>
+                  <strong>Paper preparation FAQ</strong>
+                </span>
+                <span class="paper-faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="paper-faq-content">
+                <div>
+                  <h3>How should I format my Short Paper?</h3>
+                  <p>Short Papers are limited to four pages of main content; references do not count toward the limit. Appendices are unlimited, but reviewers are not obliged to read them, so keep the main paper self-contained. Unlike the NeurIPS main track, this workshop does not require the NeurIPS paper checklist. Download the <a href="assets/rps_2026_template.zip" download>workshop LaTeX template <span aria-hidden="true">↓</span></a>, which is based on the NeurIPS style. For styling details, consult the <a href="https://neurips.cc/Conferences/2026/MainTrackHandbook" target="_blank" rel="noopener noreferrer">NeurIPS paper-formatting guidance <span aria-hidden="true">↗</span></a>.</p>
+                </div>
+                <div>
+                  <h3>Can I include additional files, code, or data?</h3>
+                  <p>Your submission must consist of a single PDF file including the main text, references, and, optionally, an appendix. Additional files are not allowed. You may link to properly anonymized code and/or data repositories.</p>
+                </div>
+                <div>
+                  <h3>How are Short Papers submitted and reviewed?</h3>
+                  <p>Short Papers are submitted through OpenReview and reviewed double-blind, following the NeurIPS main-track approach. Concurrent submissions are allowed, but authors are responsible for checking the other venue’s dual-submission policy.</p>
+                </div>
+                <div>
+                  <h3>What are the requirements for Research Notes?</h3>
+                  <p>Research Notes have no page limit and will be submitted through a separate channel. Submission details will be announced soon.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div class="shell dates-bar">
+          <div>
+            <span>Call opens</span>
+            <strong>To be announced</strong>
+          </div>
+          <div>
+            <span>Target submission deadline</span>
+            <strong>29 Aug 2026 · AoE</strong>
+          </div>
+          <div>
+            <span>Author notification</span>
+            <strong>By 29 Sep 2026 · AoE</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-reviewers" id="reviewers">
+        <div class="shell reviewer-panel">
+          <div class="reviewer-copy">
+            <h2>Program Committee</h2>
+            <p>We welcome expressions of interest from researchers across representation learning, AI for science, computational biology, scientific machine learning, and physics-based simulation—especially early-career researchers with relevant expertise.</p>
+            <p class="fine-print">Submitting the form is an expression of interest and does not automatically constitute appointment to the committee.</p>
+          </div>
+          <div class="reviewer-action">
+            <p>Expect to review up to three submissions and follow the NeurIPS conflict-of-interest policy.</p>
+            <!-- Replace the href below with the final standalone Google Form URL. -->
+            <a class="button button-large button-primary" href="https://forms.gle/REPLACE_WITH_YOUR_FORM_LINK" target="_blank" rel="noopener noreferrer">
+              <span>Express your interest in joining the Program Committee</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </a>
+            <span class="external-note">Opens a standalone Google Form in a new tab</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-speakers" id="speakers">
+        <div class="shell section-heading-row">
+          <div>
+            <h2>Invited speakers</h2>
+          </div>
+        </div>
+
+        <div class="shell people-grid speakers-grid">
+          <article class="person-card">
+            <div class="speaker-photo person-photo tone-one" aria-hidden="true"><span>SJ</span></div>
+            <div class="person-details"><h3>Stefanie Jegelka</h3><p>MIT &amp; TUM</p><span>Representation learning, symmetry, and geometric structure</span></div>
+          </article>
+          <article class="person-card">
+            <div class="speaker-photo person-photo tone-two" aria-hidden="true"><span>FL</span></div>
+            <div class="person-details"><h3>Francesco Locatello</h3><p>ISTA</p><span>Representation learning and causal representation learning</span></div>
+          </article>
+          <article class="person-card">
+            <div class="speaker-photo person-photo tone-three" aria-hidden="true"><span>JN</span></div>
+            <div class="person-details"><h3>Jigyasa Nigam</h3><p>MIT</p><span>Atomistic systems and physically constrained molecular modeling</span></div>
+          </article>
+          <article class="person-card">
+            <div class="speaker-photo person-photo tone-four" aria-hidden="true"><span>NT</span></div>
+            <div class="person-details"><h3>Nils Thuerey</h3><p>Technical University of Munich</p><span>Deep learning, partial differential equations, and fluid simulation</span></div>
+          </article>
+          <article class="person-card">
+            <div class="speaker-photo person-photo tone-five" aria-hidden="true"><span>JV</span></div>
+            <div class="person-details"><h3>Jean-Philippe Vert</h3><p>Bioptimus</p><span>Machine learning for biology, genomics, and precision medicine</span></div>
+          </article>
+          <article class="person-card">
+            <div class="speaker-photo person-photo tone-six" aria-hidden="true"><span>MG</span></div>
+            <div class="person-details"><h3>Mark Girolami</h3><p>University of Cambridge</p><span>Statistical ML, uncertainty quantification, and engineering</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-organizers" id="organizers">
+        <div class="shell section-heading-row">
+          <div>
+            <h2>Organizers</h2>
+          </div>
+        </div>
+
+        <div class="shell organizer-list">
+          <article><div><h3>Florence d’Alché-Buc</h3><p>Télécom Paris · IP Paris</p></div></article>
+          <article><div><h3>Pierre Gentine</h3><p>Columbia University</p></div></article>
+          <article><div><h3>Kara Lamb</h3><p>Columbia University</p></div></article>
+          <article><div><h3>Mathias Niepert</h3><p>University of Stuttgart</p></div></article>
+          <article><div><h3>Pietro Novelli</h3><p>Italian Institute of Technology</p></div></article>
+          <article><div><h3>Massimiliano Pontil</h3><p>Italian Institute of Technology · UCL</p></div></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-main">
+        <div>
+          <span class="footer-mark">R<span>/</span>PS</span>
+          <p>Representations for the Physical Sciences<br>NeurIPS 2026 · Paris</p>
+        </div>
+        <div class="footer-links">
+          <div><span>Navigate</span><a href="#about">About</a><a href="#call">Call for papers</a><a href="#speakers">Speakers</a></div>
+          <div><span>Participate</span><a href="#reviewers">Join the Program Committee</a><a href="#call">Submit your work</a></div>
+          <div><span>Contact</span><a href="mailto:workshop@example.org">workshop@example.org</a><a href="https://neurips.cc/" target="_blank" rel="noopener noreferrer">NeurIPS 2026 ↗</a></div>
+        </div>
+      </div>
+      <div class="shell footer-legal">
+        <span>© 2026 RPS Workshop</span>
+        <span>Independent workshop website · Details subject to confirmation</span>
+      </div>
+    </footer>
+  </body>
+</html>
