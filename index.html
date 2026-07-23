@@ -54,9 +54,9 @@
       <section class="hero" id="top">
         <div class="shell hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> NeurIPS 2026 workshop · First edition</p>
+            <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> NeurIPS 2026 workshop · Paris</p>
             <h1>Representations<br>for the Physical<br>Sciences</h1>
-            <p class="hero-deck">Self-supervision, transfer, sampling, and tokenization for scientific data and physical systems.</p>
+            <p class="hero-deck">Self-supervision, transfer learning, sampling, and tokenization for scientific data and physical systems.</p>
 
             <div class="hero-actions">
               <a class="button button-primary" href="#call">Read the call for papers <span aria-hidden="true">↘</span></a>
@@ -124,35 +124,36 @@
       </section>
 
       <section class="section section-about" id="about">
-        <div class="shell split-intro">
+        <div class="shell">
           <div>
             <h2>About the workshop</h2>
           </div>
           <div class="intro-copy">
-            <p>Representations turn observations into structured embeddings whose geometry reveals semantic content. In the physical sciences, however, the data are continuous, heterogeneous, dynamical, and constrained by governing laws.</p>
-            <p>This workshop brings together representation-learning researchers and domain scientists to ask how embeddings can remain physically meaningful, transferable, falsifiable, and actionable.</p>
+            <p>Representations map observations into structured embeddings whose geometric structure reveals semantic content. In vision and language, deep learning models trained on large unlabeled datasets have produced representations that transfer broadly across tasks. </p>
+            <p>As AI progressively permeates scientific research, large-scale datasets together with high-throughput simulation and experimental pipelines, are making it possible to learn general-purpose scientific representations at unprecedented scale.</p>
+            <p>The scientific setting, however, challenges representation learning in fundamental ways. Data are heterogeneous and structured, and often come as unlabeled streams from a dynamical system. Moreover, the learned embeddings must respect conservation laws, geometry, and causal structure. Ultimately, a useful scientific representation should expose structures that scientists can act upon.</p>
+            <p>This workshop provides a tightly scoped forum for representation learning in physical systems. For this first edition, we welcome discussions and contributions on topics around Self-Supervision, Transfer Learning, Sampling, and Tokenization, which we believe constitute the most interesting open problems in this space.</p>
           </div>
         </div>
-
         <div class="shell themes-grid">
           <article class="theme-card">
             <h3>Self-supervision</h3>
-            <p>Objectives and augmentations that preserve symmetry, conservation laws, temporal coherence, and scientific meaning.</p>
-            <span class="card-tag">physical constraints</span>
+            <p>Scientific data are often abundant but unlabeled. <a class="text-link" href="https://lilianweng.github.io/posts/2019-11-10-self-supervised/">Self-supervised learning</a> offers a natural route to extracting structure from such data, but standard pretext tasks and augmentations can violate scientific meaning. What self-supervised objectives preserve physical constraints such as conservation laws? What semantic structures do SSL objectives discover when constrained by physical priors?</p>
+            <span class="card-tag">learning with no labels</span>
           </article>
           <article class="theme-card">
             <h3>Transfer</h3>
-            <p>Reliable extrapolation into difficult regimes—and methods for verifying predictions when experiments are expensive.</p>
-            <span class="card-tag">out of distribution</span>
+            <p>Scientific models must reliably extrapolate into physically meaningful regimes beyond their training distribution. In the physical sciences, however, verifying a model's out-of-distribution prediction often requires massive computational effort or expensive wet-lab synthesis. This theme investigates the opportunities and limits of scientific transfer to ensure that learned embeddings remain falsifiable and actionable rather than just empirically successful.</p>
+            <span class="card-tag">generalization</span>
           </article>
           <article class="theme-card">
             <h3>Sampling</h3>
-            <p>Closed-loop simulation and experiment design: which rare events, edge cases, or regimes should be generated next?</p>
-            <span class="card-tag">adaptive generation</span>
+            <p>Unlike internet-scale text and image corpora, many scientific domains have access to simulators and experimental loops that can generate new data. Molecular dynamics, DFT, CFD, PDE solvers, and high-throughput experimental platforms make it possible to shape the training distribution itself. This makes adaptive simulation and closed-loop data generation a central opportunity for building better scientific representations.</p>
+            <span class="card-tag">adaptive data generation</span>
           </article>
           <article class="theme-card">
             <h3>Tokenization</h3>
-            <p>Discrete vocabularies for continuous, multi-scale, and non-Euclidean systems without losing their mechanics.</p>
+            <p>The success of foundation models relies heavily on discrete tokenization, but mapping physical sciences into discrete vocabularies remains a fundamental bottleneck. Physical data are inherently continuous, multi-scale, and often non-Euclidean. Naive grid-based patching or quantization can destroy geometric priors, symmetries, and sub-grid dynamics. This theme focuses on novel tokenization methods for physical systems.</p>
             <span class="card-tag">physical modalities</span>
           </article>
         </div>
@@ -217,7 +218,7 @@
         <div class="shell dates-bar">
           <div>
             <span>Call opens</span>
-            <strong>To be announced</strong>
+            <strong>29 Jul 2026 · AoE</strong>
           </div>
           <div>
             <span>Target submission deadline</span>
@@ -292,12 +293,12 @@
         </div>
 
         <div class="shell organizer-list">
+          <article><div><h3>Pietro Novelli</h3><p>Italian Institute of Technology</p></div></article>
+          <article><div><h3>Massimiliano Pontil</h3><p>Italian Institute of Technology · UCL</p></div></article>
           <article><div><h3>Florence d’Alché-Buc</h3><p>Télécom Paris · IP Paris</p></div></article>
           <article><div><h3>Pierre Gentine</h3><p>Columbia University</p></div></article>
           <article><div><h3>Kara Lamb</h3><p>Columbia University</p></div></article>
           <article><div><h3>Mathias Niepert</h3><p>University of Stuttgart</p></div></article>
-          <article><div><h3>Pietro Novelli</h3><p>Italian Institute of Technology</p></div></article>
-          <article><div><h3>Massimiliano Pontil</h3><p>Italian Institute of Technology · UCL</p></div></article>
         </div>
       </section>
     </main>

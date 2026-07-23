@@ -144,9 +144,8 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
 
 .section { padding: clamp(86px, 10vw, 150px) 0; }
 .section h2 { margin-bottom: 0; font-size: clamp(44px, 5.5vw, 76px); }
-.split-intro { display: grid; grid-template-columns: 1fr 0.8fr; gap: clamp(48px, 9vw, 130px); align-items: end; }
-.intro-copy { border-left: 1px solid var(--line); padding-left: 34px; color: var(--ink-soft); }
-.intro-copy p { font-family: var(--serif); font-size: 19px; line-height: 1.55; }
+.intro-copy {padding-top: 34px; color: var(--ink-soft); }
+.intro-copy p { font-family: var(--sans); font-size: 19px; line-height: 1.55; }
 .intro-copy p:last-child { margin-bottom: 0; }
 .themes-grid { margin-top: 80px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .theme-card { position: relative; min-height: 355px; padding: 28px 24px 25px; display: flex; flex-direction: column; }
@@ -236,8 +235,8 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-copy { position: relative; z-index: 2; }
   .hero-speakers { width: 100%; max-width: 720px; justify-self: center; margin-top: 20px; }
-  .split-intro, .call-grid { grid-template-columns: 1fr; }
-  .intro-copy { max-width: 650px; margin-left: auto; }
+  .call-grid { grid-template-columns: 1fr; }
+  .intro-copy { max-width: 650px; }
   .themes-grid { grid-template-columns: repeat(2, 1fr); }
   .theme-card:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .theme-card:nth-child(4) { border-top: 1px solid var(--line); }
@@ -261,8 +260,7 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
   .fact + .fact { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; }
   .section { padding: 80px 0; }
   .section h2 { font-size: 43px; }
-  .split-intro { gap: 42px; }
-  .intro-copy { border-left: 0; border-top: 1px solid var(--line); padding: 28px 0 0; }
+  .intro-copy { padding-top: 28px; }
   .themes-grid { grid-template-columns: 1fr; margin-top: 55px; }
   .theme-card { min-height: 300px; border-left: 0 !important; border-top: 1px solid var(--line); }
   .theme-card:first-child { border-top: 0; }
