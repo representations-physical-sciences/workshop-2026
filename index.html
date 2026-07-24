@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/site.css">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
     <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/hero-animation.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -64,12 +66,81 @@
             </div>
           </div>
 
-          <!-- Replace this self-contained visual with the final hero graphic or animation asset. -->
-          <div class="hero-visual" role="img" aria-label="Abstract animated visualization of representations for physical sciences">
-            <div class="hero-visual-orbit hero-visual-orbit-one" aria-hidden="true"></div>
-            <div class="hero-visual-orbit hero-visual-orbit-two" aria-hidden="true"></div>
-            <div class="hero-visual-core" aria-hidden="true"><span></span><span></span><span></span></div>
-            <p>Scientific representations<br><span>in motion</span></p>
+          <div class="hero-visual" data-hero-animation>
+            <svg class="hero-funnel-animation" viewBox="0 0 600 500" role="img" aria-labelledby="hero-animation-title hero-animation-desc">
+              <title id="hero-animation-title">From physical data to scientific representations</title>
+              <desc id="hero-animation-desc">Waveform, particle-system, and lattice observations feed a narrowing neural network and emerge as a compressed stream of binary bits.</desc>
+              <defs>
+                <clipPath id="hero-bitstream-clip">
+                  <rect x="421" y="225" width="179" height="50"></rect>
+                </clipPath>
+              </defs>
+
+              <g class="hero-source hero-source-wave">
+                <path class="hero-source-line" d="M52 108c12 0 13-21 24-21 13 0 16 43 29 43 14 0 15-37 29-37 11 0 14 15 27 15"></path>
+              </g>
+              <g class="hero-source hero-source-particle">
+                <path class="hero-source-link" d="m73 257 38-25 39 32m-77-7 77 7m-39-32 9 44"></path>
+                <circle class="hero-source-node hero-source-node-primary" cx="73" cy="257" r="7"></circle>
+                <circle class="hero-source-node hero-source-node-small" cx="111" cy="232" r="5.5"></circle>
+                <circle class="hero-source-node hero-source-node-small" cx="150" cy="264" r="6"></circle>
+                <circle class="hero-source-node hero-source-node-small" cx="120" cy="276" r="4.5"></circle>
+              </g>
+              <g class="hero-source hero-source-grid">
+                <rect class="hero-source-grid-scan" x="70" y="358" width="72" height="18"></rect>
+                <rect class="hero-source-cell" x="89" y="377" width="17" height="17" rx="2"></rect>
+                <rect class="hero-source-cell hero-source-cell-secondary" x="107" y="395" width="17" height="17" rx="2"></rect>
+                <rect class="hero-source-cell hero-source-cell-tertiary" x="71" y="413" width="17" height="16" rx="2"></rect>
+                <path class="hero-source-gridline" d="M70 358h72v72H70Zm18 0v72m18-72v72m18-72v72m-54-54h72m-72 18h72m-72 18h72"></path>
+              </g>
+
+              <g class="hero-intake" aria-hidden="true">
+                <path class="hero-intake-line" d="M162 108c31 0 49 25 76 41"></path>
+                <path class="hero-intake-line" d="M157 250h81"></path>
+                <path class="hero-intake-line" d="M143 394c40 0 64-27 95-43"></path>
+              </g>
+
+              <g class="hero-funnel" aria-hidden="true">
+                <path class="hero-funnel-glow" d="M201 72c76 34 151 92 220 164v28c-69 72-144 130-220 164Z"></path>
+                <path class="hero-funnel-shell" d="M201 72c76 34 151 92 220 164v28c-69 72-144 130-220 164Z"></path>
+
+                <g class="hero-network-connections">
+                  <path class="hero-network-link hero-network-link-one" d="M238 145 294 178M238 145 294 226M238 198 294 178M238 198 294 226M238 250 294 226M238 250 294 274M238 302 294 274M238 302 294 322M238 355 294 274M238 355 294 322"></path>
+                  <path class="hero-network-link hero-network-link-two" d="M294 178 349 215M294 178 349 250M294 226 349 215M294 226 349 250M294 274 349 250M294 274 349 285M294 322 349 250M294 322 349 285"></path>
+                  <path class="hero-network-link hero-network-link-three" d="M349 215 400 240M349 215 400 260M349 250 400 240M349 250 400 260M349 285 400 240M349 285 400 260"></path>
+                </g>
+
+                <g class="hero-network-layer hero-network-layer-one">
+                  <circle class="hero-network-node" cx="238" cy="145" r="5"></circle>
+                  <circle class="hero-network-node" cx="238" cy="198" r="5"></circle>
+                  <circle class="hero-network-node" cx="238" cy="250" r="5"></circle>
+                  <circle class="hero-network-node" cx="238" cy="302" r="5"></circle>
+                  <circle class="hero-network-node" cx="238" cy="355" r="5"></circle>
+                </g>
+                <g class="hero-network-layer hero-network-layer-two">
+                  <circle class="hero-network-node" cx="294" cy="178" r="5.5"></circle>
+                  <circle class="hero-network-node" cx="294" cy="226" r="5.5"></circle>
+                  <circle class="hero-network-node" cx="294" cy="274" r="5.5"></circle>
+                  <circle class="hero-network-node" cx="294" cy="322" r="5.5"></circle>
+                </g>
+                <g class="hero-network-layer hero-network-layer-three">
+                  <circle class="hero-network-node" cx="349" cy="215" r="6"></circle>
+                  <circle class="hero-network-node" cx="349" cy="250" r="6"></circle>
+                  <circle class="hero-network-node" cx="349" cy="285" r="6"></circle>
+                </g>
+                <g class="hero-network-layer hero-network-layer-four">
+                  <circle class="hero-network-node" cx="400" cy="240" r="6.5"></circle>
+                  <circle class="hero-network-node" cx="400" cy="260" r="6.5"></circle>
+                </g>
+              </g>
+
+              <g class="hero-bitstream" clip-path="url(#hero-bitstream-clip)" aria-hidden="true">
+                <g class="hero-bit-row">
+                  <text x="232" y="255" textLength="190" lengthAdjust="spacing">10110100101100101001</text>
+                  <text x="422" y="255" textLength="190" lengthAdjust="spacing">10110100101100101001</text>
+                </g>
+              </g>
+            </svg>
           </div>
         </div>
 
@@ -139,7 +210,6 @@
           <div class="tracks">
             <article class="track">
               <div class="track-heading">
-                <span>Track A</span>
                 <strong>Non-archival</strong>
               </div>
               <h3>Short Papers</h3>
@@ -147,8 +217,7 @@
             </article>
             <article class="track">
               <div class="track-heading">
-                <span>Track B</span>
-                <strong>Optional</strong>
+                <strong>More information coming soon</strong>
               </div>
               <h3>Research Notes</h3>
               <p>Accessible explanations of open problems, paradigms, datasets, or algorithms. New results are not required; clarity and usefulness are.</p>
@@ -158,7 +227,7 @@
               <summary>
                 <span>
                   <span class="paper-faq-label">Before you submit</span>
-                  <strong>Paper preparation FAQ</strong>
+                  <strong>Short Papers FAQs</strong>
                 </span>
                 <span class="paper-faq-icon" aria-hidden="true"></span>
               </summary>
