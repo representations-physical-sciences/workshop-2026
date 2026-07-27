@@ -242,6 +242,12 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
 .organizer-list .organizer-affiliation { margin: 2px 0 0; color: var(--ink-soft); font-size: 12px; }
 .organizer-list .organizer-bio { max-width: 510px; margin: 13px 0 0; color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.45; }
 
+.section-sponsors { border-top: 1px solid var(--line); background: var(--paper-soft); }
+.sponsors-panel { display: grid; grid-template-columns: 1.25fr 0.55fr; gap: 80px; align-items: end; }
+.sponsors-panel p { margin: 0 0 8px; color: var(--ink-soft); font-family: var(--serif); font-size: 18px; line-height: 1.45; }
+.sponsors-panel a { color: var(--accent-deep); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 38%, transparent); text-underline-offset: 4px; }
+.sponsors-panel a:hover { color: var(--accent); }
+
 .site-footer { background: var(--night); color: var(--white); padding: 68px 0 24px; }
 .footer-main { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 90px; }
 .footer-mark { display: inline-block; font-size: 25px; font-weight: 700; letter-spacing: -0.06em; }
@@ -290,6 +296,7 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
   .reviewer-panel { grid-template-columns: 1fr; }
   .people-grid { grid-template-columns: repeat(2, 1fr); }
   .section-heading-row { grid-template-columns: 1fr; gap: 30px; }
+  .sponsors-panel { grid-template-columns: 1fr; gap: 28px; align-items: start; }
   .privacy-layout { grid-template-columns: 1fr; gap: 45px; }
   .privacy-summary { max-width: 520px; }
 }
