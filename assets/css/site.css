@@ -232,12 +232,13 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
 
 .organizer-list { margin-top: 68px; display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 70px; }
 .organizer-list article { position: relative; isolation: isolate; overflow: hidden; border-top: 1px solid var(--line); }
-.organizer-card { position: relative; z-index: 1; display: block; padding: 24px 0 24px 24px; }
+.organizer-card { position: relative; z-index: 1; display: block; padding: 24px; }
 .organizer-card::before { content: ""; position: absolute; inset: 0; background: var(--paper-bright); transform: scaleY(0); transform-origin: bottom; transition: transform 240ms ease; z-index: -1; }
 .organizer-card:hover::before, .organizer-card:focus-visible::before { transform: scaleY(1); }
 .organizer-card:focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 50%, transparent); outline-offset: -3px; }
 .organizer-list h3 { margin: 0; font-family: var(--serif); font-size: 23px; font-weight: 600; }
-.organizer-list p { margin: 2px 0 0; color: var(--ink-soft); font-size: 12px; }
+.organizer-list .organizer-affiliation { margin: 2px 0 0; color: var(--ink-soft); font-size: 12px; }
+.organizer-list .organizer-bio { max-width: 510px; margin: 13px 0 0; color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.45; }
 
 .site-footer { background: var(--night); color: var(--white); padding: 68px 0 24px; }
 .footer-main { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 90px; }
@@ -249,6 +250,28 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
 .footer-links a { color: #c3cbd7; font-size: 12px; }
 .footer-links a:hover { color: #fff; }
 .footer-legal { margin-top: 70px; padding-top: 19px; display: flex; justify-content: space-between; border-top: 1px solid #344155; color: #738094; font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+.privacy-main { min-height: calc(100svh - var(--header-height)); }
+.privacy-hero { padding: clamp(70px, 9vw, 118px) 0 clamp(54px, 7vw, 86px); border-bottom: 1px solid var(--line); }
+.privacy-hero .eyebrow { color: var(--accent); }
+.privacy-hero h1 { margin-bottom: 28px; font-size: clamp(54px, 7vw, 92px); }
+.privacy-lead { max-width: 790px; margin-bottom: 24px; color: var(--ink-soft); font-family: var(--serif); font-size: clamp(20px, 2.2vw, 28px); line-height: 1.4; }
+.privacy-updated { margin: 0; color: var(--ink-soft); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+.privacy-body { padding: clamp(70px, 9vw, 118px) 0; }
+.privacy-layout { display: grid; grid-template-columns: minmax(190px, 0.38fr) minmax(0, 1fr); gap: clamp(50px, 9vw, 130px); align-items: start; }
+.privacy-summary { padding-top: 18px; border-top: 1px solid var(--line); }
+.privacy-summary strong { display: block; margin-bottom: 10px; color: var(--accent); font-size: 10px; text-transform: uppercase; letter-spacing: 0.13em; }
+.privacy-summary p { margin: 0; color: var(--ink-soft); font-family: var(--serif); font-size: 17px; line-height: 1.5; }
+.privacy-content { max-width: 760px; }
+.privacy-content section { padding: 0 0 42px; margin-bottom: 42px; border-bottom: 1px solid var(--line); }
+.privacy-content section:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: 0; }
+.privacy-content h2 { margin: 0 0 20px; font-size: clamp(31px, 3.3vw, 43px); line-height: 1.05; }
+.privacy-content h3 { margin: 27px 0 9px; font-family: var(--serif); font-size: 23px; font-weight: 600; }
+.privacy-content p, .privacy-content li { color: var(--ink-soft); font-size: 15px; line-height: 1.75; }
+.privacy-content ul { margin: 0; padding-left: 21px; }
+.privacy-content a { color: var(--accent-deep); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 38%, transparent); text-underline-offset: 3px; }
+.privacy-content a:hover { color: var(--accent); }
+.privacy-back { white-space: nowrap; }
 
 @media (max-width: 980px) {
   :root { --shell: min(100% - 38px, 760px); }
@@ -265,6 +288,8 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
   .reviewer-panel { grid-template-columns: 1fr; }
   .people-grid { grid-template-columns: repeat(2, 1fr); }
   .section-heading-row { grid-template-columns: 1fr; gap: 30px; }
+  .privacy-layout { grid-template-columns: 1fr; gap: 45px; }
+  .privacy-summary { max-width: 520px; }
 }
 
 @media (max-width: 680px) {
@@ -299,6 +324,9 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
   .footer-main { grid-template-columns: 1fr; gap: 45px; }
   .footer-links { grid-template-columns: 1fr 1fr; }
   .footer-legal { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .privacy-back { font-size: 12px; }
+  .privacy-hero h1 { font-size: 49px; }
+  .privacy-content section { padding-bottom: 34px; margin-bottom: 34px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
