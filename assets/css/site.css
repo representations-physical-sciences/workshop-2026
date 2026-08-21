@@ -152,6 +152,8 @@ html[data-theme="dark"] .button-primary { color: #08101d; }
 .person-card:nth-child(1) .speaker-photo img { object-position: 50% 45%; }
 .person-card:nth-child(2) .speaker-photo img { object-position: 50% 25%; }
 .person-card:nth-child(3) .speaker-photo img { object-position: 48% 38%; }
+.person-card:nth-child(4) .speaker-photo img { object-position: 50% 30%; }
+.person-card:nth-child(5) .speaker-photo img { object-position: 50% 35%; }
 .person-card:hover .speaker-photo { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(17, 28, 45, 0.15); }
 
 .event-facts { margin-top: clamp(70px, 9vw, 122px); display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
