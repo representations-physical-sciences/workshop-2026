@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generate the static accepted-paper catalogue and individual pages (Python 3)."""
 import argparse
+import hashlib
 import json
 import re
 from html import escape
@@ -52,11 +53,15 @@ def validate(papers):
             raise ValueError(f'{slug}.presentation must be an object')
         kind = presentation.get('type')
         if kind == 'poster':
-            if presentation.get('session') not in ('morning', 'afternoon'):
-                raise ValueError(f'{slug}: poster session must be morning or afternoon')
+            if presentation.get('session') not in ('morning', 'afternoon', 'TBD'):
+                raise ValueError(f'{slug}: poster session must be morning, afternoon, or TBD')
         elif kind == 'oral':
-            if not isinstance(presentation.get('time'), str) or not re.fullmatch(r'(?:[01][0-9]|2[0-3]):[0-5][0-9]', presentation['time']):
-                raise ValueError(f'{slug}: oral time must be HH:MM (Paris local time)')
+            oral_time = presentation.get('time')
+            if not isinstance(oral_time, str) or not (
+                oral_time == 'TBD'
+                or re.fullmatch(r'(?:[01][0-9]|2[0-3]):[0-5][0-9]', oral_time)
+            ):
+                raise ValueError(f'{slug}: oral time must be HH:MM (Paris local time) or TBD')
         else:
             raise ValueError(f'{slug}: presentation type must be poster or oral')
         if paper.get('pdf'):
@@ -81,7 +86,11 @@ def schedule(paper):
     presentation = paper['presentation']
     if presentation['type'] == 'oral':
         time = presentation['time']
+        if time == 'TBD':
+            return 'Oral presentation · <span class="schedule-tbd">time TBD</span>'
         return f'Oral presentation · <time datetime="2026-12-13T{time}:00+01:00">{time}</time> (Paris time)'
+    if presentation['session'] == 'TBD':
+        return 'Poster presentation · <span class="schedule-tbd">session and time TBD</span>'
     return f'Poster session · {presentation["session"].capitalize()} <span class="schedule-tbd">(time TBD)</span>'
 
 
@@ -113,7 +122,7 @@ def video_section(video):
 
 def detail(paper):
     title = escape(paper['title'])
-    abstract = ''.join(f'<p>{escape(paragraph).replace(chr(10), "<br>")}</p>' for paragraph in paper['abstract'].split('\n\n') if paragraph.strip())
+    abstract = ''.join(f'<p>{escape(paragraph)}</p>' for paragraph in paper['abstract'].split('\n\n') if paragraph.strip())
     pdf = '<p class="paper-note">The authors have not made a PDF available on this website.</p>'
     if paper.get('pdf'):
         url = resolve(paper['pdf'], '../')
@@ -136,26 +145,75 @@ def detail(paper):
     </div>'''
 
 
-def catalogue(papers):
+def paper_map(papers, path):
+    """Embed only a map built from this exact public catalogue (never stale data)."""
+    if not path.exists() or not papers:
+        return ''
+    data = json.loads(path.read_text())
+    fields = [{key: p[key] for key in ('slug', 'title', 'authors', 'abstract')} for p in papers]
+    fingerprint = hashlib.sha256(json.dumps(fields, sort_keys=True, ensure_ascii=True).encode()).hexdigest()
+    if data.get('version') != 2 or data.get('fingerprint') != fingerprint:
+        print('Paper map is out of date; run uv run scripts/build-paper-map.py, then rebuild pages.')
+        return ''
+    payload = json.dumps(data, ensure_ascii=True).replace('<', r'\u003c').replace('>', r'\u003e').replace('&', r'\u0026')
+    return f'''<section class="shell paper-map" data-paper-map hidden aria-labelledby="paper-map-heading">
+      <div class="paper-map-header"><div><h2 id="paper-map-heading">Explore the papers</h2>
+      <p>Find a topic. Follow a connection. Discover your next read.</p></div>
+      <button type="button" data-map-expand aria-pressed="false">Expand map ↗</button></div>
+      <div class="paper-map-app">
+        <div class="paper-map-toolbar"><div data-map-search-slot></div>
+        <span data-map-status role="status" aria-live="polite"></span>
+        <button type="button" data-map-clear hidden>Clear filters ×</button></div>
+        <div class="paper-map-topics" data-map-topics aria-label="Filter map by topic"></div>
+        <div class="paper-map-grid">
+          <div class="paper-map-canvas" data-map-canvas>
+            <svg data-map-plot role="group" aria-label="Paper map. Drag to pan; use plus and minus to zoom. Select a topic label or paper dot."></svg>
+            <div class="paper-map-tooltip" data-map-tooltip hidden></div>
+            <div class="paper-map-navigation" aria-label="Map navigation">
+              <button type="button" data-map-zoom-in aria-label="Zoom in">+</button>
+              <button type="button" data-map-zoom-out aria-label="Zoom out">−</button>
+              <button type="button" data-map-reset>Fit map</button>
+            </div>
+            <p class="paper-map-hint">Drag to pan · Scroll to zoom · Click a topic or a paper</p>
+          </div>
+          <aside class="paper-map-sidebar" aria-label="Map papers"><div data-map-detail></div></aside>
+        </div>
+      </div>
+      <details class="paper-map-about"><summary>About this map</summary>
+        <p>Each dot is a paper. Colours and labels indicate automatically discovered topic groups. Search titles, authors and abstracts, select a topic, then choose a dot or a result to read the abstract. Related papers let you follow connections across topics.</p>
+        <p>Local sentence embeddings represent the titles and full abstracts; scikit-learn computes the t-SNE layout and K-means groups. Topic names are matched to scientific subject descriptions. Recommendations use cosine similarity before projection. Positions and topic boundaries are approximate discovery cues, not measures of quality. The standalone build script also supports TF-IDF and exports PCA coordinates.</p>
+      </details><script type="application/json" data-paper-map-data>{payload}</script>
+    </section>'''
+
+
+def catalogue(papers, map_html=''):
     rows = ''.join(f'''<li class="paper-row"><div>
-      <h2><a href="papers/{paper['slug']}.html">{escape(paper['title'])}</a></h2>
-      <p class="paper-authors">{escape(', '.join(paper['authors']))}</p>
+      <h2><a href="papers/{paper['slug']}.html" data-paper-title>{escape(paper['title'])}</a></h2>
+      <p class="paper-authors" data-paper-authors>{escape(', '.join(paper['authors']))}</p>
+      <p class="paper-search-excerpt" data-paper-abstract hidden>{escape(" ".join(paper['abstract'].split()))}</p>
       <a class="text-link" href="papers/{paper['slug']}.html">Abstract &amp; materials <span aria-hidden="true">→</span></a>
     </div><p class="paper-schedule">{schedule(paper)}</p></li>''' for paper in papers)
-    body = f'<p class="catalogue-count">{len(papers)} accepted {"paper" if len(papers) == 1 else "papers"}</p><ul class="paper-list">{rows}</ul>' if papers else '''<div class="papers-empty"><h2>Accepted papers coming soon</h2><p>Submissions are closed. The accepted-paper list and presentation schedule will be published here soon.</p></div>'''
-    return f'''<section class="papers-hero"><div class="shell">
+    body = f'''<div class="paper-search" data-paper-search hidden>
+      <label for="paper-search">Search papers</label>
+      <input type="search" id="paper-search" placeholder="Search titles, authors, and abstracts…" aria-describedby="paper-search-help" aria-controls="paper-list" autocomplete="off">
+      <p id="paper-search-help" class="paper-note">Matches all search words, in any order. Search is case-insensitive.</p>
+    </div>
+    <p class="catalogue-count" data-paper-count role="status" aria-live="polite" aria-atomic="true">{len(papers)} accepted {"paper" if len(papers) == 1 else "papers"}</p>
+    <p class="papers-no-results" data-paper-no-results hidden>No papers match your search. Try another title, author, or keyword.</p>
+    <ul class="paper-list" id="paper-list">{rows}</ul>''' if papers else '''<div class="papers-empty"><h2>Accepted papers coming soon</h2><p>Submissions are closed. The accepted-paper list and presentation schedule will be published here soon.</p></div>'''
+    return f'''<section class="papers-hero papers-hero--catalogue"><div class="shell">
       <p class="eyebrow">Workshop contributions · 13 December 2026</p>
       <h1>Accepted papers</h1>
       <p class="papers-lead">Explore the research presented at Representations for the Physical Sciences.</p>
-      <p class="paper-note">Oral presentation times are local to Paris (CET). Morning and afternoon poster session times will be announced.</p>
-    </div></section><section class="shell papers-catalogue" aria-label="Accepted paper catalogue">{body}</section>'''
+      <p class="paper-note">Oral presentation times are local to Paris (CET). Poster session assignments and times will be announced.</p>
+    </div></section>{map_html}<section class="shell papers-catalogue" aria-label="Accepted paper catalogue">{body}</section>'''
 
 
 def build(source, output):
     papers = json.loads(source.read_text())
     validate(papers)
     layout = Template((ROOT / 'templates/papers-layout.html').read_text())
-    pages = {'papers.html': layout.substitute(prefix='', title='Accepted papers', description='Accepted papers and presentation schedules for the RPS workshop at NeurIPS 2026.', content=catalogue(papers))}
+    pages = {'papers.html': layout.substitute(prefix='', title='Accepted papers', description='Accepted papers and presentation schedules for the RPS workshop at NeurIPS 2026.', content=catalogue(papers, paper_map(papers, source.parent / 'paper-map.json')))}
     for paper in papers:
         pages[f'papers/{paper["slug"]}.html'] = layout.substitute(prefix='../', title=escape(paper['title']), description=escape(f'{paper["title"]} — {", ".join(paper["authors"])}. Accepted at the RPS workshop, NeurIPS 2026.', quote=True), content=detail(paper))
     # Only remove our own generated pages when a paper is removed from the data.

@@ -1,0 +1,21 @@
+# Local OS metadata and Python caches.
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Credentials and private organizer/screening artifacts do not belong on the site.
+.env
+.env.*
+output/
+tmp/
+publication-pdfs/
+main-site-exports/
+main-site-*.zip
+*.audit.json
+review_decisions.json
+organizer_notes.json
+openreview_snapshot.json
+pdf_cache.json
+screening*.json
+screening*.csv
+data/*dummy*.csv

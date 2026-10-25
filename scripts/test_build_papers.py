@@ -45,6 +45,45 @@ class PaperPagesTests(unittest.TestCase):
             self.assertNotIn('<video', detail)
             self.assertNotIn('data-video-embed', detail)
 
+    def test_catalogue_includes_safe_searchable_metadata(self):
+        listing = builder.catalogue([PAPER])
+        self.assertIn('type="search"', listing)
+        self.assertIn('aria-controls="paper-list"', listing)
+        self.assertIn('data-paper-search hidden', listing)
+        self.assertIn('data-paper-count role="status"', listing)
+        self.assertIn('data-paper-no-results hidden', listing)
+        self.assertIn('data-paper-title', listing)
+        self.assertIn('data-paper-authors', listing)
+        self.assertIn('data-paper-abstract hidden', listing)
+        self.assertIn('&lt;script&gt;markup&lt;/script&gt;', listing)
+        self.assertNotIn('<script>markup', listing)
+        self.assertNotIn('type="search"', builder.catalogue([]))
+
+    def test_math_sources_and_assets_survive_generation(self):
+        paper = dict(PAPER, title=r'Symmetry $C_4$ and $\Delta$',
+                     abstract='Inline $x^2$.\n\nDisplay \\[\nx &= 1 \\\\\ny &= 2\n\\]')
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            listing = self.generate([paper], root)
+            detail = (root / 'papers/example-paper.html').read_text()
+            for page in (listing, detail):
+                self.assertIn(r'Symmetry $C_4$ and $\Delta$', page)
+                self.assertIn('katex@0.19.0/dist/katex.min.css', page)
+                self.assertLess(page.index('/katex.min.js'), page.index('/contrib/auto-render.min.js'))
+                self.assertLess(page.index('/contrib/auto-render.min.js'), page.index('assets/js/papers.js'))
+            self.assertIn('\\[\nx &amp;= 1', detail)
+            self.assertNotIn('<br>', builder.detail(paper))
+
+    def test_unassigned_poster_session_is_explicitly_tbd(self):
+        paper = dict(PAPER, presentation={'type': 'poster', 'session': 'TBD'})
+        builder.validate([paper])
+        listing = builder.catalogue([paper])
+        detail = builder.detail(paper)
+        for page in (listing, detail):
+            self.assertIn('session and time TBD', page)
+            self.assertNotIn('Morning', page)
+            self.assertNotIn('Afternoon', page)
+
     def test_schedules_pdf_and_file_video(self):
         oral = copy.deepcopy(PAPER)
         oral.update(presentation={'type': 'oral', 'time': '10:30'}, pdf='assets/papers/public.pdf',

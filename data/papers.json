@@ -1,1 +1,1332 @@
-[]
+[
+  {
+    "slug": "paper-1",
+    "title": "The Limits of Exact Symmetry as a Transfer Prior: Dimensionless Invariants Give No Durable Advantage over Log-Scaled Inputs in 1D Neural Operators",
+    "authors": [
+      "Suhrit Bestavemula",
+      "Rishith Gudepu",
+      "Aditya Raut",
+      "Sagar Raut",
+      "Neeraj Sai Venkat Movva",
+      "Nelson Mburu",
+      "Sathvik Loke"
+    ],
+    "abstract": "A central promise of physics-aware representations is transfer: an embedding respecting a system's governing structure should extrapolate into regimes never seen in training. Fluid equations offer a clean test, admitting an exactly correct structural representation—dynamical similarity makes the solution operator depend on the dimensional parameters only through the dimensionless groups Re and Ma. In smooth, shock-free 1D Burgers and compressible flow we compare two operators with identical architectures and budgets: a naive operator conditioned on log-scaled raw parameters (log μ, log L, log c₀) and a similarity operator conditioned on (log Re, log Ma), evaluated on held-out conditions—length scales outside the training band and (Re, Ma) configurations disjoint from training. The invariant encoding improves out-of-band transfer only when training covers a single length scale (4.2× with an MLP); once training contains modest parameter diversity the advantage collapses, consistent with the naive operator reconstructing the invariants from its inputs. Gaps are geometric means over five seeds; the collapse appears in every MLP seed and is reproduced with a Fourier Neural Operator backbone. A positive control varies how hard the invariant is to obtain from the inputs: re-parameterizing so that it is no longer a linear function of the encoded parameters—while holding feature ranges or the extrapolation axis fixed—restores a durable 2.3–2.6× advantage. We read this as evidence that, in this setting, the value of an exact symmetry prior depends less on its correctness than on its recoverability: whether the invariant is a simple function of the inputs the network already receives.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-1.pdf",
+    "video": null,
+    "openreview_id": "062LO7IHtj",
+    "openreview_url": "https://openreview.net/forum?id=062LO7IHtj"
+  },
+  {
+    "slug": "paper-2",
+    "title": "Measuring and Mitigating Forgetting when Extending a PDE Foundation Model to Simulated Flow Regimes",
+    "authors": [
+      "Wasif Masood",
+      "Shoaib Masood Noor"
+    ],
+    "abstract": "Foundation models for partial differential equations adapt efficiently to new tasks, but their effect on the original pretraining distribution is rarely measured. We study this retention problem on Poseidon, a neural operator pretrained on periodic-domain compressible Euler and incompressible Navier–Stokes families. We adapt it to two regimes absent from pretraining, a compressible Kelvin–Helmholtz flow and wall-bounded flow past a circular cylinder. Fine-tuning adapts efficiently but degrades the pretraining families. LoRA still forgets substantially, and freezing the whole trunk reduces forgetting without preventing it. We show that low-weight replay and joint training resolve this trade-off, extending the model to the new regimes while keeping the pretraining families near their original accuracy. These results suggest that lightweight replay can extend a PDE foundation model while substantially preserving its existing capabilities",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-2.pdf",
+    "video": null,
+    "openreview_id": "XwMrQSsWF3",
+    "openreview_url": "https://openreview.net/forum?id=XwMrQSsWF3"
+  },
+  {
+    "slug": "paper-4",
+    "title": "$C_4$-Equivariant Flow Matching on Anisotropic Power-Diagram Graphs for Microstructure Generation",
+    "authors": [
+      "Dawid Lipinski",
+      "Jixiang Qing",
+      "Henry Moss"
+    ],
+    "abstract": "Acquiring realistic microstructure data through Electron Backscatter Diffraction (EBSD) is costly and time consuming, often relying on specialised equipment. As microstructures strongly influences material properties, generating realistic samples is essential for modelling the behaviour of polycrystalline materials. We introduce a generative model for synthesising realistic polycrystalline microstructures using flow matching and graph neural networks. By representing microstructures as anisotropic power diagrams, our model learns a compact geometric parametrisation and can render generated samples at arbitrary pixel resolution. A $C_4$-equivariant architecture incorporates rotational symmetry directly into the model, ensuring that rotations of the input noise produce corresponding rotations of the generated microstructure. We also demonstrate how training-free guidance can be used to generate complex microstructures, based on user defined objective function. In particular, we generate microstructures resembling a copper weld, cast metal slab, 3D-printed stainless steel and heterogeneous lamella titanium",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-4.pdf",
+    "video": null,
+    "openreview_id": "kzF8fgmB72",
+    "openreview_url": "https://openreview.net/forum?id=kzF8fgmB72"
+  },
+  {
+    "slug": "paper-5",
+    "title": "Kernel-induced statistical representations for continuous stiffness field inversion via Karhunen-Loève expansion",
+    "authors": [
+      "Jiaye Liang",
+      "Yongsheng Zhao"
+    ],
+    "abstract": "Learning representations of continuous physical fields from sparse observations remains challenging due to the mismatch between high-dimensional spatial variations and limited measurement information. In this work, continuous stiffness inversion is formulated as a structured latent representation learning problem rather than a direct field regression. A Karhunen-Loève (KL) expansion derived from a spatial covariance kernel is introduced as a mathematical representation of continuously varying stiffness fields, projecting the spatial field into a compact coefficient space. The resulting latent variables provide a constrained parameterization of admissible field variations and reduce the ambiguity of the inverse mapping from dynamic responses to spatial properties. By learning a direct mapping from sparse frequency response functions (FRFs) to KL coefficients, the proposed framework reconstructs continuous stiffness fields without intermediate modal feature extraction. Experiments on  a simply supported Euler-Bernoulli beam benchmark demonstrate accurate field reconstruction (Field Error=4.06%, $R^2=0.9779$) under 5% measurement noise. The results illustrate how statistical field representations can facilitate continuous inference of physical parameters from sparse dynamic observations.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-5.pdf",
+    "video": null,
+    "openreview_id": "XGjvrUl0qt",
+    "openreview_url": "https://openreview.net/forum?id=XGjvrUl0qt"
+  },
+  {
+    "slug": "paper-9",
+    "title": "Self-Supervised Representation Learning for JWST Galaxy Images and Low Resolution Spectra",
+    "authors": [
+      "Yang Cheng",
+      "Morgan Fouesneau",
+      "Ivelina G. Momcheva",
+      "Tobias Buck",
+      "Shengxiu Sun"
+    ],
+    "abstract": "A self-supervised multimodal model recovers galaxy stellar masses from sparse \\emph{JWST} data that lack the multi-band coverage required by traditional SED fitting. We train on single-band F150W imaging paired with observed-frame $1$--$2 ~ \\mu$m PRISM spectra and obtain a joint image-spectrum representation that recovers stellar mass at $1<z\\le3$ with $R^2 \\sim 0.9$ and $\\sigma_{\\mathrm{NMAD}} = 0.24$~dex; cross-modal CLIP alignment further raises single-modality performance by $\\Delta R^2 = +0.04$ (imaging) and $+0.09$ (spectroscopy), narrowing the gap to joint-modality inference. The code and documentation are available at (GitHub) https://github.com/2003cy/neurips2026_ssl_jwst .",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-9.pdf",
+    "video": null,
+    "openreview_id": "PqHSs14LOj",
+    "openreview_url": "https://openreview.net/forum?id=PqHSs14LOj"
+  },
+  {
+    "slug": "paper-10",
+    "title": "Pre-Structural Embeddings for Protein-RNA Binding Affinity Prediction",
+    "authors": [
+      "Josef Hanke",
+      "Sebastian Pujalte Ojeda",
+      "Shengyu Zhang",
+      "Werngard Czechtizky",
+      "Leonardo De Maria",
+      "Michele Vendruscolo"
+    ],
+    "abstract": "Biomolecular foundation models such as AlphaFold 3 and Boltz-2 are typically used through their decoded structural outputs. However, many biologically important molecules, including RNA and intrinsically disordered proteins, populate conformational ensembles that cannot be fully represented by a single static structure. We propose that intermediate representations from these models contain rich pre-structural embeddings useful for downstream tasks involving conformationally flexible biomolecules. Including predicted-structure information is expensive and provides little value in this context. We validate this representation strategy on protein-RNA binding affinity prediction, a task where both partners are structurally heterogeneous and structure-based methods generalize poorly outside related examples. We introduce ZeroFold, a transformer-based model that integrates protein and RNA pre-structural embeddings from Boltz-2 through cross-modal attention to predict binding affinity directly from sequence. To ensure rigorous evaluation, we construct PRADB, a curated benchmark of 2,582 unique protein-RNA pairs with experimentally measured affinities, split at a strict 40% sequence identity threshold for both modalities. On the held-out test set, ZeroFold achieves a Spearman correlation of 0.64, approaching the empirical ceiling imposed by inter-replicate experimental variability. Under progressively stricter evaluations that remove training-set overlap with competing methods, ZeroFold performs consistently better than the leading structure-based predictor (CoPRA) and sequence-based predictor (DeePNAP), with the advantage widening as overlap is reduced. Ablations replacing pre-structural embeddings with language-model features or Boltz-2 distogram-derived structural features substantially degrade performance. These results support pre-structural embeddings as an optimal representation strategy for learning the interactions of flexible biomolecules.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-10.pdf",
+    "video": null,
+    "openreview_id": "x389AC5dYY",
+    "openreview_url": "https://openreview.net/forum?id=x389AC5dYY"
+  },
+  {
+    "slug": "paper-11",
+    "title": "When Does a Fourier Neural Operator Fail? Spectral Diagnostics for Low-Rank Surrogates of Reaction–Diffusion",
+    "authors": [
+      "Hyunjun Yi",
+      "David J Zhang",
+      "Wenhao Lu",
+      "Jonathan Liu",
+      "Spursh Deshpande"
+    ],
+    "abstract": "Neural surrogates for PDE simulators are usually judged by one-step error, which hides the two failures that matter in practice: error accumulation under autoregressive rollout and collapse on unseen parameter regimes. We study a compact CP-factorised Fourier neural operator (LiteFNO) against a parameter-matched CNN on the Gray-Scott benchmark from The Well, asking not only whether the surrogate fails but why. (i) LiteFNO needs 22% fewer FLOPs than the CNN, but both its one-step edge and its rollout advantage in a single seed reverse under three-seed averaging; rollout error is instead governed by the fate of the high-frequency spectrum, which the CNN over-damps and LiteFNO over-excites. (ii) Causally ablating the lowest-magnitude retained Fourier modes shows they contribute little at one step yet dominate mid-horizon rollout error. (iii) In a preliminary leave-one-regime-out study, failure on a held-out Gray-Scott regime correlates with the share of simulator spatial variance at low wavenumber (Spearman $\\rho=0.94$ over six regimes, single seed), a statistic requiring no trained model. We also report noise and 6-bit quantisation robustness, CPU/GPU latency, and a deferral pilot in which ensemble disagreement captures essentially all of the oracle-achievable gain, while showing that out-of-distribution error is spread across steps rather than concentrated in a discardable minority. These results argue for spectral diagnostics, computed from simulator output alone, as a cheap pre-training predictor of surrogate reliability.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-11.pdf",
+    "video": null,
+    "openreview_id": "ternx3BLwG",
+    "openreview_url": "https://openreview.net/forum?id=ternx3BLwG"
+  },
+  {
+    "slug": "paper-12",
+    "title": "StabilityArc: Decoding Protein Sequence Embeddings into Generalizable Stability Landscapes",
+    "authors": [
+      "Aaron Lee Feller",
+      "Andrew Ellington",
+      "Claus O Wilke"
+    ],
+    "abstract": "Every protein has a unique stability landscape, but the physical consequences of mutation are governed by recurring biochemical constraints. We test whether a shared decoder, trained on measurements from diverse proteins, can interpret these constraints in an unseen target, enabling cross-protein transfer for initial experimental round prescreening. We present StabilityArc, which maps frozen ESMC-600M residue representations through a shared RoPE transformer to an $L\\times20$ matrix of substitution effects; a symmetric, contact-aware residual aids in predicting epistasis in simultaneous substitutions. In 66 strict leave-one-protein-out evaluations covering 134,794 ProteinGym variants, StabilityArc achieves 0.7134 Spearman correlation, exceeding the strongest zero-shot baseline, ProSST-2048 (0.6526), by 0.0608. We further explore the utility of this method by providing the score as a prior for Kermut, achieving Spearman correlation of 0.8280 across three supervised split schemes, improving on Kermut's reported 0.8167.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-12.pdf",
+    "video": null,
+    "openreview_id": "5EpT3EkJ7E",
+    "openreview_url": "https://openreview.net/forum?id=5EpT3EkJ7E"
+  },
+  {
+    "slug": "paper-13",
+    "title": "SciFusion: Compositional Representations for Physics-Guided 3D Scientific Image Generation",
+    "authors": [
+      "Luoxi Wang",
+      "Alessio Quercia",
+      "Hanno Scharr",
+      "Arya Bangun"
+    ],
+    "abstract": "Existing 3D generative models for scientific imaging are typically trained separately for each modality, limiting knowledge transfer across heterogeneous imaging domains and requiring substantial modality-specific data. We present SciFusion, a physics-guided compositional latent diffusion framework that learns a unified representation for 3D scientific image generation across modalities. SciFusion factorizes each modality into reusable domain, object, and contrast representations, allowing shared structure to transfer across MRI, CT, and electron microscopy (EM) while preserving modality-specific characteristics, and enabling zero-shot generation of unseen modality compositions without target-modality training. To respect modality-dependent image formation, we incorporate domain-specific physics guidance based on MRI power-spectrum statistics, CT Radon projections, and EM diffraction patterns. Experiments across 15 medical and scientific imaging modalities show that SciFusion improves generation quality under unified training and successfully synthesizes unseen modality compositions. These results suggest that compositional, physics-grounded representations provide a scalable framework for transferable 3D scientific image generation.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-13.pdf",
+    "video": null,
+    "openreview_id": "k82lss3l0p",
+    "openreview_url": "https://openreview.net/forum?id=k82lss3l0p"
+  },
+  {
+    "slug": "paper-15",
+    "title": "Sample-Efficiency of Kolmogorov–Arnold Networks in DeepRL",
+    "authors": [
+      "Kevin Riehl",
+      "Shaimaa K. El-Baklish",
+      "Fan Wu",
+      "Anastasios Kouvelas"
+    ],
+    "abstract": "Deep reinforcement learning has achieved substantial performance gains over classical control approaches.\nYet, a central challenge to learning in real-world applications is acquiring costly samples.\nKolmogorov-Arnold Networks are a recently proposed architecture that can learn physical relationships in control problems effectively, with significantly higher parameter efficiency and interpretability when compared to Multi-Layer-Perceptron architectures.\nIn this work, we systematically study sample-efficiency using computational experiments, covering the Feynman dataset and the Gymnasium RL benchmark.\nThe results show that similar performance can be achieved with 40\\% fewer samples using the Kolmogorov-Arnold architecture, and that relative performance improvements up to 50\\% occur during the training process.\nThe observed gains are robust to varying levels of noise in rewards.\nThese results highlight the potential of the Kolmogorov-Arnold architectures for more sample-efficient reinforcement learning.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-15.pdf",
+    "video": null,
+    "openreview_id": "LsJEhZ67aR",
+    "openreview_url": "https://openreview.net/forum?id=LsJEhZ67aR"
+  },
+  {
+    "slug": "paper-21",
+    "title": "Enhanced Drift Sampling: Rare-Event Free-Energy Estimation with Tilted Drift Targets",
+    "authors": [
+      "Francesco Alesiani",
+      "Gerrit Gerhartz",
+      "Henrik Christiansen",
+      "Mathias Niepert"
+    ],
+    "abstract": "Rare-state free-energy estimation remains exponentially expensive under direct equilibrium sampling, even when generative models provide approximately independent configurations. Enhanced Diffusion Sampling addresses this problem by steering pretrained diffusion models toward biased ensembles, but requires multistep reverse-SDE integration and Feynman--Kac correction weights. We introduce \\emph{Enhanced Drift Sampling} (\\method{}), which transfers biasing and reweighting to one-step drifting generators by tilting a reference bank with $w\\propto e^{-b}$. We develop steering, adaptation, and multi-step refinement variants for umbrella, metadynamics, and linear biases. Exact thermodynamic reweighting requires exact biased windows; approximate drifted windows additionally require adequate bank coverage and proposal overlap. On a double well, an exact-tilt oracle reduces generated-sample requirements, whereas the tested finite-step protocol fails from a collapsed initialization. Umbrella variants reconstruct toy and alanine potentials of mean force, and tilted BioEmu ensembles reduce finite-sample error for the emulator's own rare-state probability, but do not remove its discrepancy from molecular-dynamics references.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-21.pdf",
+    "video": null,
+    "openreview_id": "8Am5AW5eZZ",
+    "openreview_url": "https://openreview.net/forum?id=8Am5AW5eZZ"
+  },
+  {
+    "slug": "paper-25",
+    "title": "Sparse Space-Time Tokenization for Water-Level Reconstruction on River Networks",
+    "authors": [
+      "Ruben Cartuyvels",
+      "Karim Douch",
+      "Gabriele Bertoli",
+      "Artemis Vrettou",
+      "Mounia El Baz",
+      "Sébastien Lefèvre",
+      "Diego Fernandez Prieto"
+    ],
+    "abstract": "Satellite altimeters observe river water levels globally, but their measurements are irregular and extremely sparse in space and time. We introduce a dataset for reconstructing daily water surface elevation (WSE) on 19,172 reaches of the Amazon river network from heterogeneous satellite measurements. Fewer than 1% of reaches are observed per day, causing a dense reach--time representation to consist mostly of missing values. We instead tokenize only observed measurements and requested predictions, sample connected river subgraphs, and process the resulting sequence with a bidirectional selective state space model and topology-aware positional encodings. Masked reconstruction provides self-supervision across both locations and times, and node-independent metadata encodings permit transfer to reaches absent from training. Against held-out in situ gauges, this sparse representation outperforms graph-imputation baselines and a state-of-the-art domain-specific method. These results indicate that, under extreme sparsity, physical topology can be more useful for choosing and encoding tokens than as a message-passing graph.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": null,
+    "video": null,
+    "openreview_id": "o0gze3RDVk",
+    "openreview_url": "https://openreview.net/forum?id=o0gze3RDVk"
+  },
+  {
+    "slug": "paper-26",
+    "title": "A Hybrid Equivariant–Scalar Message Passing Framework for Geometric Molecular Graphs",
+    "authors": [
+      "Anna Katharina Picha",
+      "Stefan Boresch",
+      "Nils Morten Kriege",
+      "Esther Heid"
+    ],
+    "abstract": "Geometric graph neural networks are widely applied to molecular systems, typically relying on local neighborhoods and a common message passing scheme across all distances. However, the distinct physical nature of short-range many-body effects and long-range behavior suggests using separate, distance-dependent representations. We propose a hybrid message passing framework combining equivariant local updates with scalar longer-range interactions. We evaluate the approach on molecular energy and force prediction tasks, analyzing the trade-off between accuracy and computational cost across cutoff configurations. Our results show that combining equivariant and scalar updates can achieve accuracy comparable to fully equivariant models while substantially reducing computational cost.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-26.pdf",
+    "video": null,
+    "openreview_id": "6mouoDthW1",
+    "openreview_url": "https://openreview.net/forum?id=6mouoDthW1"
+  },
+  {
+    "slug": "paper-27",
+    "title": "Euclidean Fourier Neural Operators",
+    "authors": [
+      "Nathanael Bosch",
+      "Niklas Frederik Schmitz",
+      "Michael F. Herbst"
+    ],
+    "abstract": "Fourier neural operators (FNOs) provide an efficient framework for learning mappings between function spaces as they are, by construction, independent of the grid resolution at which they are trained and evaluated. However, FNOs are not independent of the periodic domain they are applied to: their discrete spectral weights are indexed by integer Fourier mode numbers, which correspond to physical wavevectors. When applied to a different domain, the same trained weights act at different wavevectors, and the FNO silently represents a different operator. This makes FNOs unsuitable for tasks where transfer across domains is crucial. We propose Euclidean Fourier neural operators~(EFNOs) as a domain-independent alternative to FNOs. By parameterizing the spectral kernel as a continuous function of the physical wavevector, the EFNO can learn operators that act consistently across periodic domains of varying shape and size. We evaluate the EFNO on a simple heat equation and on a practically relevant materials science task of learning exchange-correlation potentials across different crystal structures, and demonstrate that the EFNO is able to generalize to unseen grid sizes and domains.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-27.pdf",
+    "video": null,
+    "openreview_id": "X7WY1HNqty",
+    "openreview_url": "https://openreview.net/forum?id=X7WY1HNqty"
+  },
+  {
+    "slug": "paper-28",
+    "title": "Multiscale Residual Tokenization for Continuous Spectral Coordinates: Semantics and Physical Stability",
+    "authors": [
+      "Susanna Di Vita",
+      "Philippe Schwaller"
+    ],
+    "abstract": "Spectral coordinates are continuous, but many foundation-model pipelines require discrete vocabularies. We introduce multiscale residual tokenization (MRT), which represents each coordinate by level-specific coarse-to-fine residual digits. On frozen NMR Sim→Exp retrieval, MRT improves ¹³C Top-1 from 0.1363 to 0.2006, compared with 0.1071 for fixed-width quantization, and improves ¹H Top-1 from 0.0141 to 0.0281.\n\nWe use controlled coordinate jitter to isolate why this representation transfers. MRT reduces degradation relative to adaptive quantization, but the absolute comparison depends on perturbation scale: at the smallest tested jitter, post-perturbation kNN is tied on ¹H and IR and lower on ¹³C; by jitter comparable to the finest residual scale, MRT overtakes adaptive in absolute kNN across all three coordinates.\n\nFor example, at ρ = 1.50 on ¹H, ρ = 1.00 on ¹³C, and ρ = 1.00 on IR, MRT is ahead by 0.0243, 0.0202, and 0.0032 kNN Tanimoto, respectively. Paired bootstrap intervals on the jitter degradation difference exclude zero at every tested NMR and IR jitter level. A packed-token ablation removes most of this advantage, supporting the role of explicit level-wise geometry. These results identify a tradeoff between clean semantic geometry and stability in spectral tokenization.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": null,
+    "video": null,
+    "openreview_id": "L8YP59q1Eo",
+    "openreview_url": "https://openreview.net/forum?id=L8YP59q1Eo"
+  },
+  {
+    "slug": "paper-29",
+    "title": "Learning Hierarchical Causal Representations of the Effects of Forcings on Temperature in Climate Models",
+    "authors": [
+      "Shan Zhao",
+      "Ilija Trajković",
+      "Julia Kaltenborn",
+      "Yaniv Gurwicz",
+      "Peer Nowack",
+      "David Rolnick",
+      "Julien Boussard"
+    ],
+    "abstract": "Machine learning (ML) emulators provide a fast and cost-effective method to simulate climate change scenarios after being trained on Earth System Models projections. However, the black-box nature of those data-driven approaches limit the usability and trustworthiness of their outputs and in particular their use as causal attribution tools. Here, we develop a hierarchical causal representation learning framework applied to sea surface temperature fields from a state-of-the-art global climate model. As a key advance over previous work, our framework explicitly models both atmospheric dynamical interactions arising from internal climate variability and forced responses due to changes in atmospheric greenhouse gas and aerosol concentrations. When trained on future climate change scenarios, our method accurately predicts the long-term global mean and regional temperature evolution and shows physically realistic responses to perturbations in greenhouse gas and aerosol concentrations when evaluated on unseen scenarios. Our results underline the potential of causal representation learning frameworks for advancing climate model emulation.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-29.pdf",
+    "video": null,
+    "openreview_id": "7N10vFJWep",
+    "openreview_url": "https://openreview.net/forum?id=7N10vFJWep"
+  },
+  {
+    "slug": "paper-32",
+    "title": "A Description-Derived Drug-Drug Interaction Benchmark Reveals Split-Dependent Molecular Representation Rankings",
+    "authors": [
+      "Manel Gil-Sorribes",
+      "Isaac Filella-Merce",
+      "Alexis Molina"
+    ],
+    "abstract": "Drug-drug interaction (DDI) prediction is clinically important and poses a distinct challenge for molecular representation learning. Unlike single-molecule property prediction, DDI requires a predictor to compose two molecular representations into a relational outcome. DrugBank provides curator-authored DDI descriptions rather than ready-made categorical labels, so a categorical prediction target must first be derived from the text. We construct a dataset of DDI pairs by mapping processed descriptions to six text-derived categories and define a benchmark with four holdout regimes that restrict train-test chemical overlap from random pairs to scaffold-disjoint evaluation. We then use this benchmark to compare molecular fingerprints, pretrained sequence representations, and graph-derived features across five seeds and multiple classifier heads. Molecular fingerprints lead the high-overlap random split, whereas graph-derived representations lead the drug- and scaffold-holdout regimes, with the gap increasing as molecular overlap is restricted. Changing the classifier head affects absolute performance but not the relative representation ranking. These results show that representation rankings change with test-set novelty under a fixed description-derived label space.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-32.pdf",
+    "video": null,
+    "openreview_id": "BQRvcRE5jj",
+    "openreview_url": "https://openreview.net/forum?id=BQRvcRE5jj"
+  },
+  {
+    "slug": "paper-37",
+    "title": "Taxonomic Tokenisation and Self-Supervised Pretraining for Transferable Microbiome Representations",
+    "authors": [
+      "Neythen J Treloar",
+      "Saif Ur-Rehman",
+      "Jenny Yang"
+    ],
+    "abstract": "Taxonomic abundance profiles provide a compact view of microbial communities, but heterogeneous and partially resolved taxonomies make learning transferable representations challenging. We investigate whether taxonomic tokenisation and self-supervised pretraining can address this problem. We assemble Atlas, a corpus of 539,308 microbiome profiles from diverse ecological contexts, and introduce a fallback tokenisation scheme that retains the most specific available taxonomic assignment when genus-level labels are unavailable. Using Atlas, we pretrain the Waypoint family of models, GPT-style causal language models trained to understand microbiomes. We evaluate their learned representations on Compass, a benchmark spanning eight environmental and gut-microbiome prediction tasks. We show that pretraining consistently improves downstream performance and enables favourable scaling with model capacity. Further, models pretrained without human-associated or gut samples still perform well on human gut tasks, demonstrating transfer learning across ecological domains. We find that incomplete vocabulary coverage across independently processed datasets can limit downstream performance, identifying taxonomic tokenisation as an important remaining limitation. Together, these results show that self-supervised pretraining can learn transferable microbiome representations while motivating more robust tokenisation methods for microbiome data.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-37.pdf",
+    "video": null,
+    "openreview_id": "u1T9iLEkL2",
+    "openreview_url": "https://openreview.net/forum?id=u1T9iLEkL2"
+  },
+  {
+    "slug": "paper-38",
+    "title": "Robust Transfer Learning for Paper ECG Recognition",
+    "authors": [
+      "Yinghao Xie",
+      "Zhenbang Dai",
+      "Haojun Wang",
+      "Jinyu Cai",
+      "Fabio Bonassi",
+      "Hongwu Chen",
+      "Johan Sundström",
+      "Jiawei LI",
+      "Antônio H. Ribeiro"
+    ],
+    "abstract": "Paper ECG recognition is challenging because real-world ECG images vary in layout, physical artifacts, and label availability. We introduce RobECG-CL, a rank-aware contrastive learning framework for robust paper ECG representation learning. Starting from standard 12-lead ECG recordings, we construct progressively degraded paper ECG views with heterogeneous layouts and train the model to balance same-recording invariance with degradation-aware ordering. Across synthetic stress tests on CODE-II and EchoNext, RobECG-CL improves robustness under severe degradation and few-shot transfer, outperforming contrastive learning baselines and surpassing the waveform-based foundation model, ECG-FM, in the 1\\% labeled setting. On 312 samples of hospital data with 37 labels, RobECG-CL achieves the best macro AUROC.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-38.pdf",
+    "video": null,
+    "openreview_id": "TgvSDAXcx7",
+    "openreview_url": "https://openreview.net/forum?id=TgvSDAXcx7"
+  },
+  {
+    "slug": "paper-40",
+    "title": "Patching Non-Euclidean Domains for Neural PDE Solvers",
+    "authors": [
+      "Aleksa Milovanović"
+    ],
+    "abstract": "Localising a neural field by splitting its domain into patches is standard in flat domains and underlies both finite basis solvers and patch based tokenisation, but a curved surface carries no grid, so the patch family must itself be constructed. We show that overlapping decompositions of the ambient space restrict to a partition of unity on any orientable surface at no cost in generality, and that patches defined by geodesic distance can be used even though the PDE residual differentiates the windows twice while geodesic distance admits no closed form. On a smooth torus patching brings no benefit. On three meshes, with up to ten seeds each, the gain of geodesic patches over a tuned global network grows with how far ambient proximity departs from intrinsic proximity, from a factor of 1.7 to 4.6 on a hand scan. Geodesic patches improve on ambient boxes on every mesh tested, by factors of 1.4 to 2.1 in the mean with p < 0.001 under a rank test, and at low distortion the whole gain comes from going intrinsic, since ambient boxes alone do not beat a tuned global network. On a family of progressively squashed tori the advantage of geodesic patches over ambient boxes grows from parity to a factor of 5.5.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-40.pdf",
+    "video": null,
+    "openreview_id": "6KO7j4xiNx",
+    "openreview_url": "https://openreview.net/forum?id=6KO7j4xiNx"
+  },
+  {
+    "slug": "paper-41",
+    "title": "Cross-simulator transfer with self-supervised representations in 21cm cosmology",
+    "authors": [
+      "Yannic Pietschke",
+      "Caroline Heneka",
+      "Ayodele Ore",
+      "Romain Meriot"
+    ],
+    "abstract": "Simulation-based inference is limited by model misspecification: neural summaries trained on one simulator degrade on data from another, or from a real instrument. We study this in 21cm cosmology, where the brightness-temperature field from the Epoch of Reionization is targeted by the Square Kilometre Array (SKA). We pretrain a Vision Transformer once with a self-supervised Joint Embedding Predictive Architecture (JEPA) objective, label-free, on cheap semi-numerical simulations, freeze it, and transfer to a physically distinct hydrodynamical radiative-transfer simulator with a disjoint parameter set, under realistic instrumental noise. The frozen encoder, shown neither the target simulator, its parameters, nor any noise, matches or exceeds a supervised network retrained directly on the noisy target, and retains calibrated posteriors. A controlled ablation holding architecture and pretraining data fixed shows that the self-supervised objective, not data scale, is what enables this robustness.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-41.pdf",
+    "video": null,
+    "openreview_id": "QuhZq5MSNL",
+    "openreview_url": "https://openreview.net/forum?id=QuhZq5MSNL"
+  },
+  {
+    "slug": "paper-43",
+    "title": "Reconstruction Training Increases Linear Accessibility of Global Geometry in a Particle Transport Surrogate",
+    "authors": [
+      "Eric W. Roginek",
+      "Joel A. Kulesza",
+      "Yijun Zhao"
+    ],
+    "abstract": "Scientific simulations increasingly rely on reduced representations that preserve reconstruction-relevant physical structure while reducing computational cost for calculations. Monte Carlo (MC) particle transport provides a setting for studying learned representations, as the dependence of spatial mesh tallies on geometry and particle distribution statistics are well-defined. This work uses a residual 3D U-Net to map paired simulation data consisting of low-sample mesh tallies (e.g., $16^3$, $10^5$) and their relative fractional statistical uncertainties to fine, high-sample predictions (e.g., $64^3$, $10^8$). The dataset is generated with the MCNP\\textsuperscript{\\textregistered} code, a production-grade particle transport simulator, and contains 943 cases, with each case consisting of a water object with either a box, cylinder, or sphere as the outer geometry, and an embedded lead inclusion defined as the internal geometry, irradiated by two orthogonal photon cone-beam sources. Linear probes and matched representation controls test whether physical attributes become more accessible in U-Net's bottleneck after reconstruction training. Matched linear-readouts compare the raw input, PCA/POD, an untrained U-Net, and the trained representation. Latent encoding of the outer geometry rises from $0.909$ balanced accuracy in the raw input and $0.884$ in the untrained bottleneck to $0.992$ in the trained U-Net bottleneck. This finding suggests U-Net reorganizes pre-existing global geometry information and motivates direct comparisons between learned and prescribed reduced coordinates in future simulation studies.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": null,
+    "video": null,
+    "openreview_id": "UOMBg9eA03",
+    "openreview_url": "https://openreview.net/forum?id=UOMBg9eA03"
+  },
+  {
+    "slug": "paper-44",
+    "title": "Pretraining Basis Functions Accelerates Convergence and Improves Accuracy in Domain-Decomposed Physics-Informed Neural Networks",
+    "authors": [
+      "Samuel Anderson",
+      "Philéas Grenade",
+      "Sean De Marco",
+      "Jennifer Pestana",
+      "Victorita Dolean",
+      "Ben Moseley"
+    ],
+    "abstract": "Physics-informed neural networks (PINNs) provide a flexible approach for solving partial differential equations (PDEs), but suffer from slow training and spectral bias. Domain-decomposed PINNs with random neural network bases can accelerate training by replacing nonlinear optimisation with linear least-squares solves, but their bases can be redundant and poorly suited to a given PDE class. We instead pretrain a shared subdomain basis on example solutions from a PDE class during an offline representation-learning stage, then freeze the basis and solve only for its coefficients at train-time on new problem instances. On 1D harmonic oscillator and 2D Helmholtz problems, pretrained bases significantly improve accuracy, conditioning, and solve efficiency over random bases. Furthermore, we show bases pretrained on low-frequency problems transfer zero-shot to higher-frequency instances by scaling the number of subdomains, without further pretraining.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-44.pdf",
+    "video": null,
+    "openreview_id": "kHU58pgWcb",
+    "openreview_url": "https://openreview.net/forum?id=kHU58pgWcb"
+  },
+  {
+    "slug": "paper-45",
+    "title": "Fine-tuning a Multi-modal Generative Model for Inertial Confinement Fusion on NIF Experiments",
+    "authors": [
+      "Michael Jones",
+      "Noah Michael Gonzalez",
+      "Daniel T. Casey",
+      "Eugene Kur",
+      "Bogdan Kustowski",
+      "Kelli Humbird"
+    ],
+    "abstract": "Inertial confinement fusion (ICF) experiments are expensive and sparse, while the simulations used to model them often exhibit discrepancies with experimental observations. Moreover, experiments provide only partial and noisy measurements across a heterogeneous suite of diagnostics, making adaptation of simulation-trained models challenging. We address this problem by fine-tuning a multi-modal generative diffusion model, pretrained on ICF simulations, using data from 48 National Ignition Facility (NIF) experiments. Our framework combines (1) imputation of missing experimental modalities, (2) simulation replay to maintain supervision over unobserved quantities, and (3) a round-trip objective that encourages self-consistency across inference directions. We demonstrate improved prediction of scalar quantities and neutron images on held-out experiments, as well as enhanced consistency under round-trip inference tests. Our method provides a general framework for adapting simulation-trained generative surrogates to sparse, heterogeneous experimental observations.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-45.pdf",
+    "video": null,
+    "openreview_id": "34M55bH3Hs",
+    "openreview_url": "https://openreview.net/forum?id=34M55bH3Hs"
+  },
+  {
+    "slug": "paper-48",
+    "title": "Quantifying cross-modal transfer in astronomical transient classification",
+    "authors": [
+      "Francisco Forster Buron",
+      "Daniel Moreno-Cartagena",
+      "Mathias González Espinoza",
+      "Guillermo Cabrera-Vives",
+      "Pablo A Estevez",
+      "Javier Correa-Orellana",
+      "Steve Jurado"
+    ],
+    "abstract": "We investigate whether the classification of observed astronomical transients exhibits cross-modal transfer: the improved performance of models trained with more modalities than are available at inference. We consider models trained with combinations of light curves, images and spectra using different modality drop and fine-tuning strategies. For a sample of observed transients, we confirm that multimodal models show better macro F1 classification performance, although with consistent or marginally worst calibration errors. We find no significant cross-modal transfer using light curve-only inference, and we marginally detect cross-modal transfer using light curves and images at inference. Classic models trained with manually engineered features achieve better classification metrics than light curve-only inference models, but have significantly worst calibration errors.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-48.pdf",
+    "video": null,
+    "openreview_id": "jryuFKVikV",
+    "openreview_url": "https://openreview.net/forum?id=jryuFKVikV"
+  },
+  {
+    "slug": "paper-49",
+    "title": "Does Text Steer Neural PDE Surrogates? A Controlled Diagnostic with OperatorCLIP",
+    "authors": [
+      "Aadi Dash",
+      "Lennon J. Shikhman",
+      "Michael Galarnyk"
+    ],
+    "abstract": "Lower error from a text-conditioned neural surrogate does not, by itself, show that the model uses the meaning of the text. We examine this attribution problem with *OperatorCLIP*, a CLIP-style text–data conditioning system, by comparing an unconditioned FNO, a constant-sentence FiLM control, and a fixed task description trained with contrastive alignment. Three-seed experiments cover Darcy2D, ShallowWater2D, and three-dimensional compressible Navier–Stokes (CNS3D). The constant control lowers mean relative $L^2$ error by $19.0$% on Darcy2D and $17.7$% on ShallowWater2D, showing that conditioning-pathway and capacity changes can produce apparent gains. Alignment improves ShallowWater2D by $18.9$%, worsens Darcy2D by $5.1$%, and has no mean benefit on CNS3D. Each dataset supplies only one task-level description. In this regime, pairwise InfoNCE cannot identify positive text–data pairs and is minimized at $\\log B$; shuffled prompts are unchanged, and semantically corrupted descriptions remain close to correct ones. These results diagnose architectural and optimization effects, but do not demonstrate semantic steering.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-49.pdf",
+    "video": null,
+    "openreview_id": "HhQUk3hDvO",
+    "openreview_url": "https://openreview.net/forum?id=HhQUk3hDvO"
+  },
+  {
+    "slug": "paper-50",
+    "title": "How Much Physics Can Vision Learn from Audio? Probing and Distilling Damping Structure",
+    "authors": [
+      "Zainab Afolabi",
+      "Vadim Selyutin",
+      "Zhao Gao",
+      "Babs Khalidson",
+      "Mohamed Ghoneim"
+    ],
+    "abstract": "Physical understanding requires inferring properties like damping that govern material behavior, yet vision models struggle with such latent structure while audio encodes it directly through measurable acoustic decay. We probe frozen encoders for the quality factor $Q$, a dimensionless measure of resonance, and find that audio embeddings predict $Q$ at Spearman $\\rho = 0.73$ while single-frame vision reaches only $0.28$. To transfer this physical structure, we distill a frozen audio teacher into a frozen CLIP encoder through a trained projection head. Under a leave-one-material-out protocol where category recognition earns nothing, distillation improves correlation from $0.234$ to $0.338$ (15/17 materials, $p=0.002$). Controls confirm the gain requires audio-visual correspondence rather than added capacity. Four frames spanning the impact provide half this improvement without any acoustic supervision, indicating that part of what single-frame vision misses is visible dynamics. The teacher reaches $0.600$ under the same protocol, so most of the acoustic signal does not cross.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-50.pdf",
+    "video": null,
+    "openreview_id": "jhfaxVfeq0",
+    "openreview_url": "https://openreview.net/forum?id=jhfaxVfeq0"
+  },
+  {
+    "slug": "paper-52",
+    "title": "LTS: A Lightweight Persistent-Latent Reformulation of Transolver for Transient Impact Simulation",
+    "authors": [
+      "Chia Feng Liao",
+      "Lin Chou",
+      "Shih-Chi Wang"
+    ],
+    "abstract": "Physics surrogates accelerate engineering analysis, but Transolver-based models repeatedly route between full-resolution meshes and latent tokens in every Physics-Attention block, incurring substantial cost. We adopt single-pass latent projection within the Transolver backbone and obtain LTS, a Lightweight Transolver Surrogate that constructs physics-aware latent tokens once, processes them persistently through all intermediate blocks, reconstructs node features only at the output, and applies lightweight component and global adaptation after decoding. On DropTest, a fixed-topology industrial phone-drop benchmark, LTS reduces train-step latency by 84.6%, peak allocated training memory by 82.5%, and inference latency across all 99 independently queried target states by 86.9% relative to a depth-matched Transolver. It also lowers stress relative $\\mathrm{L}_2$ error from 3.54% to 2.85%, while displacement relative $\\mathrm{L}_2$ error increases from 0.47% to 0.64%. Routing-frequency experiments show that accuracy gains from re-routing are non-monotonic, whereas computational cost increases substantially. These results characterize the accuracy--efficiency trade-off of persistent latent processing in transient impact simulation.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-52.pdf",
+    "video": null,
+    "openreview_id": "sOyjZ39nlb",
+    "openreview_url": "https://openreview.net/forum?id=sOyjZ39nlb"
+  },
+  {
+    "slug": "paper-53",
+    "title": "DINOspec: Efficient Multimodal Alignment of Vision and Spectral Foundation Models for Astronomy",
+    "authors": [
+      "Erica Lastufka",
+      "Mariia Drozdova",
+      "Daniel Schaerer",
+      "Slava Voloshynovskiy"
+    ],
+    "abstract": "Astronomical observations provide multimodal views of physical systems, with images and spectra capturing complementary properties of celestial objects. Scientific foundation models can learn powerful representations from these observations, but representations learned by separate models remain difficult to combine. We investigate whether laten space representations learned by separate vision and spectral models can be aligned without retraining their encoders. We introduce DINOspec, a multimodal framework that aligns a frozen DINOv3 image encoder with a pre-trained AION-1 spectral encoder using lightweight adapters and contrastive learning on 20,472 paired images and spectra of astronomical objects. DINOspec improves galaxy morphology classification (F1: 0.72$\\rightarrow$0.78) and spectral type classification (F1: 0.70$\\rightarrow$0.74) while training at few as 21M parameters. Redshift prediction shows no consistent improvement over the AION-1 baseline of $R^2\\approx0.9$, demonstrating that potential benefits of alignment depends on the configuration and downstream task. These results provide an empirical study of composing astronomical representations from independently pretrained foundation models through lightweight alignment modules.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-53.pdf",
+    "video": null,
+    "openreview_id": "QDmJdG9hEY",
+    "openreview_url": "https://openreview.net/forum?id=QDmJdG9hEY"
+  },
+  {
+    "slug": "paper-54",
+    "title": "Lens-LeJEPA: Learning the Right Invariances for Strong Gravitational Lenses",
+    "authors": [
+      "Arnesh Batra",
+      "Karthik Gaur",
+      "Pranath Reddy",
+      "Michael W. Toomey",
+      "Sergei Gleyzer"
+    ],
+    "abstract": "Strong gravitational lenses probe small-scale dark matter structure, but labelled simulations are expensive and labelled real lenses barely exist. Self-supervised pretraining should help, yet its usual augmentations are physically wrong here: zooming a lens image rescales the Einstein radius. \\textbf{Lens-LeJEPA} replaces them with two lensing priors on a teacher-free joint-embedding objective, exact $D_4$ correspondence between image patches and consistency of arc-weighted descriptors pooled in lens-centred rings. One encoder, pretrained on 87.5k unlabelled images and then frozen, serves three tasks through low-rank adapters. Under a matched budget the priors add 11.6 accuracy points at 100 labels per class and beat the previous lensing-specific JEPA by 13 to 30 points, while rank-stabilized LoRA matches full fine-tuning with 11\\% of the weights. We also report where the approach loses, on axion-mass regression, and argue both outcomes follow from the same invariance.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-54.pdf",
+    "video": null,
+    "openreview_id": "KOf4YaWH5b",
+    "openreview_url": "https://openreview.net/forum?id=KOf4YaWH5b"
+  },
+  {
+    "slug": "paper-59",
+    "title": "Learning Calibrated and Samplable Predictive Distributions of Surface-Ocean $\\Delta p\\mathrm{CO}_2$ Using Tabular Diffusion Models",
+    "authors": [
+      "Gabriele Accarino",
+      "Mohammad M.Amirian",
+      "Thea H. Heimdal",
+      "Amanda R. Fay",
+      "Galen A. McKinley",
+      "Viviana Acquaviva"
+    ],
+    "abstract": "The ocean absorbs almost 30\\% of anthropogenic $\\mathrm{CO}_2$ emissions, but quantifying this sink requires estimating surface-ocean $\\mathrm{CO}_2$ from sparse observations in space and time. Most existing machine-learning estimates of this field are deterministic, giving a single value per grid point, with uncertainty approximated post hoc via residuals, ensembles, or prescribed distributions. We instead learn, for each observation, a conditional predictive distribution: using Treeffuser, a conditional diffusion model with gradient-boosted-tree score functions, we estimate the full predictive distribution of $\\Delta p\\mathrm{CO}_2$ (the sea–air $p\\mathrm{CO}_2$ difference) from $13$ environmental, spatial, and temporal predictors. On a held-out SOCAT test set, Treeffuser attains, among the uncertainty-quantification methods evaluated, the lowest continuous ranked probability score ($8.229$ $\\micro atm$ and the coverage closest to the nominal 68\\% / 95\\% levels ($0.686$ / $0.930$), while retaining point-prediction skill comparable to a deterministic XGBoost baseline (RMSE $18.4$ vs $17.7$  $\\micro atm$; $R^2$ $0.77$ vs $0.79$). These results show that conditional diffusion can provide well-calibrated, observation-level uncertainties while largely preserving point-prediction skill. Because Treeffuser is generative, its samples can support probabilistic analyses of $\\Delta p\\mathrm{CO}_2$; extending this to spatially coherent field reconstruction will require modeling dependence across grid cells and evaluation on spatially held-out data.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-59.pdf",
+    "video": null,
+    "openreview_id": "dpSnxP8j9Y",
+    "openreview_url": "https://openreview.net/forum?id=dpSnxP8j9Y"
+  },
+  {
+    "slug": "paper-60",
+    "title": "Online Active Testing for Budget-Efficient Evaluation of Molecular Potentials",
+    "authors": [
+      "Hugo Schmutz",
+      "Hachem Kadri",
+      "Thierry Artières"
+    ],
+    "abstract": "Reliable evaluation of machine learning models in quantum chemistry can require a large number of expensive reference calculations. This challenge is particularly acute when molecular configurations are generated sequentially: each new configuration requires an immediate decision on whether to perform the quantum-mechanical evaluation, which can be orders of magnitude more expensive than generating the configuration itself. While active learning methods address this computational bottleneck during model training, existing active testing methods largely assume access to a pool of unlabelled samples and are therefore not directly suited to sequentially generated configurations. We introduce \\emph{Online Active Testing} (OAT) for estimating model risk when data arrive sequentially, and reference calculations are available only under a limited budget. OAT combines an unbiased importance-weighted estimator with a lightweight surrogate that guides evaluation decisions online. We derive the variance-optimal sampling rule and evaluate OAT on a molecular simulation task involving expensive quantum-chemistry calculations. On this task, OAT achieves the same estimation accuracy as uniform sampling using only $\\sim$30\\% of the reference calculations, compared with $\\sim$23\\% for an oracle strategy with access to the true loss. These results demonstrate that OAT can substantially reduce the computational cost of reliable model evaluation.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-60.pdf",
+    "video": null,
+    "openreview_id": "BpM1YYH3X4",
+    "openreview_url": "https://openreview.net/forum?id=BpM1YYH3X4"
+  },
+  {
+    "slug": "paper-61",
+    "title": "Hierarchical Representation Learning for Metal-Organic Frameworks",
+    "authors": [
+      "Michał Sanocki",
+      "Julija Zavadlav"
+    ],
+    "abstract": "Metal-organic framework (MOF) property prediction is challenging because labeled datasets remain sparse relative to the vast chemical design space, despite substantial reuse of chemically similar building blocks across structures. We introduce a three-stage framework comprising structural segmentation (MOFSEG), representation learning (MOFENC), and property modeling (MOFMOD). MOFMOD is a hierarchical multiresolution graph neural network that represents MOFs simultaneously through atoms, linker motifs, organic linkers, and inorganic nodes. It combines periodic geometry with component representations pretrained by MOFENC and exchanges information across chemically defined resolutions. This design enables representations learned from recurring MOF components to be reused across distinct crystal structures while retaining their local and periodic environments. MOFSEG provides the structural hierarchy required by the model and successfully processes 94.8\\% of structures across three MOF datasets WS24, hMOF, and QMOF. On band-gap prediction, MOFMOD compares favorably against state-of-the-art  MOF-specific graph and transformer models. These results demonstrate the potential of hierarchical component-level representation learning for MOF property prediction and provide a framework for transferring chemical information across the MOF design space.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-61.pdf",
+    "video": null,
+    "openreview_id": "hdqkbsNH7Y",
+    "openreview_url": "https://openreview.net/forum?id=hdqkbsNH7Y"
+  },
+  {
+    "slug": "paper-63",
+    "title": "Equivariance Breaks the Learning Rate",
+    "authors": [
+      "Andrei Manolache",
+      "Mathias Niepert"
+    ],
+    "abstract": "Equivariant networks are commonly trained with Adam, yet recent work reports that matrix structured optimizers such as Muon can perform better, with the reasons for these gains only partly understood. We identify one source of this difference inside equivariant layers. An equivariant layer learns one channel mixing matrix $W_l$ per degree $l$, which we call an irrep block, and shares it across the $2l+1$ components, giving the expanded map $W_l \\otimes I_{2l+1}$. This sharing sums gradient contributions across components and can produce different update scales under SGD. Adam's entrywise normalization reduces sensitivity to gradient scale, but neither optimizer directly controls the effective step size of each block. A single learning rate can therefore produce different effective step sizes across blocks. Muon instead controls the effective step size by approximately equalizing the singular values of each momentum matrix. We normalize each irrep block update by a single scalar, preserving its singular value ratios while letting the learning rate control its size. We implement this with spectral normalization or a simpler root-mean-square normalization. We evaluate spectral normalization in a controlled $\\mathrm{SO}(3)$-equivariant model with a matched non-equivariant model. In this setting, the step size mismatch grows with width in the equivariant model but not in the non-equivariant model. We evaluate both variants across molecular force prediction on the rMD17 and MD22 datasets, QM9 molecular property prediction, and charged particle dynamics. Across these applications, block normalization generally improves Adam and closes part of its gap to Muon. These results highlight an overlooked interaction between equivariant architectures and their optimizers. Studying and designing the two together may help explain and address training difficulties often attributed to equivariance itself.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-63.pdf",
+    "video": null,
+    "openreview_id": "cZIani6mxU",
+    "openreview_url": "https://openreview.net/forum?id=cZIani6mxU"
+  },
+  {
+    "slug": "paper-64",
+    "title": "Multi-Fidelity Transfer Learning Reshapes Uncertainty Quantification in Atomistic Models",
+    "authors": [
+      "Matteo Tolloso",
+      "Davide Bacciu",
+      "Luigi Bonati"
+    ],
+    "abstract": "Multi-fidelity training is an increasingly important form of transfer learning in atomistic machine learning, where models pretrained on abundant low-fidelity calculations are adapted using scarce high-fidelity labels.\n    Although uncertainty quantification is critical for deploying these models beyond their training distribution, it remains unclear how predictive uncertainty and its decomposition change during transfer across fidelity levels. Here we extend the MACE architecture with mean–variance outputs and use deep ensembles to study aleatoric and epistemic uncertainty across single-fidelity training and low-to-high fidelity fine-tuning under system-level distribution shift.\n    Our results show that the transfer through high-fidelity fine-tuning not only improves accuracy but also produces more stable and reliable uncertainty estimates. Furthermore, it changes the role of uncertainty decomposition and particularly which components are informative for generalization. Aleatoric uncertainty often loses calibration and ranking power under changes in fidelity and distribution shift, whereas epistemic uncertainty becomes a more reliable indicator of errors in unseen systems. These findings show that the behavior and quality of uncertainty estimates in atomistic models are not fixed properties of the model architecture, but depend on the training pathway.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-64.pdf",
+    "video": null,
+    "openreview_id": "eDkyK7htIV",
+    "openreview_url": "https://openreview.net/forum?id=eDkyK7htIV"
+  },
+  {
+    "slug": "paper-67",
+    "title": "Distillation of Foundation Models for Time-dependent PDEs",
+    "authors": [
+      "Daniel Musekamp",
+      "Boshra Ariguib",
+      "Andrei Manolache",
+      "Mathias Niepert"
+    ],
+    "abstract": "Foundation models for time-dependent partial differential equations (PDEs) are trained on large and diverse collections of physical systems and can generalize effectively to new downstream tasks. After fine-tuning on only a few trajectories from a target domain, they can achieve strong accuracy in low-data regimes. However, these models are typically large and computationally intensive, limiting their usefulness as fast surrogates for numerical solvers. \nWe propose Teacher Rollout Extension (TREX), a knowledge distillation framework that transfers the predictive capability of a pretrained foundation model into a compact and efficient student. Starting from a fine-tuned teacher, TREX augments limited downstream data by generating long synthetic trajectories through teacher rollouts, optionally with periodic noise injection. This procedure samples from the teacher-induced rollout distribution without requiring explicit knowledge of the initial-condition distribution, while exposing the student to long-horizon states and local recovery behavior around states encountered during autoregressive prediction. The student can further incorporate task-specific inductive biases, such as equivariance, that the teacher does not necessarily enforce.\nThe experiments show that the student trained with TREX can match or surpass the teacher’s accuracy while achieving more than an order-of-magnitude speedup in inference.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-67.pdf",
+    "video": null,
+    "openreview_id": "1PyrI5TiC8",
+    "openreview_url": "https://openreview.net/forum?id=1PyrI5TiC8"
+  },
+  {
+    "slug": "paper-70",
+    "title": "Force Alignment Does Not Predict Transfer: Contrasting Denoising and Force Regression",
+    "authors": [
+      "Max Rausch-Dupont",
+      "Dietrich Klakow"
+    ],
+    "abstract": "Recent approaches to pre-training atomistic neural networks refine the denoising objective to improve the implicitly learned force-field, assuming a direct link between force-field accuracy and downstream gains on property prediction. We test this premise with a matched comparison of denoising against supervised force regression, relating output and representation-level force alignment to fine-tuning performance. While denoising yields poorer and degrading force alignment, it still achieves decreasing downstream error and maintains an advantage over force regression. These results question whether explanations of downstream gains should be based on the accuracy of the learned force field.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-70.pdf",
+    "video": null,
+    "openreview_id": "l1aktuaarV",
+    "openreview_url": "https://openreview.net/forum?id=l1aktuaarV"
+  },
+  {
+    "slug": "paper-72",
+    "title": "HyProt: A Long-Context Hybrid Attention-SSM Protein Language Model and a Matched Comparison with Transformers",
+    "authors": [
+      "Lina Bellahmidi",
+      "Ghassene Jebali",
+      "Arturo Fiorellini-Bernardis",
+      "Sebastien Boyer",
+      "Oliver Bent"
+    ],
+    "abstract": "Protein language models are at one of two extremes in how they handle sequence context. Transformers such as ESM-2 attend to every pair of residues, which is precise but costs compute quadratic in sequence length. State-space models such as LC-PLM instead compress the sequence into a fixed-size memory, keeping the cost linear but giving up the exact recall of distant positions. Hybrid attention-SSM models occupy a useful middle ground for text and DNA. In this paper, we introduce HyProt, an 8M-parameter hybrid attention-SSM protein language model pretrained on UniRef50 with a masked language modeling objective and a 1024-token context, and compare it against a transformer trained with the same data, optimizer, and token budget, so that any difference comes from the architecture. HyProt performs on par with the matched transformer on ProteinGym. Evaluated out of distribution, on held-out sequences up to 16x the 1024-token training context, perplexity diverges at roughly 4K residues: below this the transformer is slightly ahead, while HyProt avoids the sharp degradation the transformer suffers above it. The throughput crossover falls around 8K residues. These results position the hybrid backbone as a practical middle point on the precision-efficiency spectrum for protein modeling. This is work in progress; we are scaling model size and adapting training for downstream tasks such as protein-protein interactions.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-72.pdf",
+    "video": null,
+    "openreview_id": "vK44lYjLIB",
+    "openreview_url": "https://openreview.net/forum?id=vK44lYjLIB"
+  },
+  {
+    "slug": "paper-74",
+    "title": "Self-Supervised Coarse Spaces for Structured Multigrid Failure Modes",
+    "authors": [
+      "Reza Akbarian Bafghi",
+      "Rahul Sharma",
+      "John L. Davenport",
+      "Maziar Raissi"
+    ],
+    "abstract": "Can a learned representation improve a structured multigrid solver after\nstrong classical tuning? We train a Fourier Neural Operator to produce a\nlow-dimensional coarse space using an unsupervised Rayleigh-quotient loss,\nwhich consumes neither solution labels nor eigensolves. We evaluate two\nfailure modes. For rotated anisotropic diffusion in 2D, default\nRuge-Stueben algebraic multigrid (AMG) takes 106.5 iterations, versus\n46.7 for geometric multigrid (GMG); the learned space reduces AMG to\n55.4. A stronger classical baseline changes the conclusion: evolution\nstrength-of-connection reduces AMG to 32.6 without learning, and the\nsame learned checkpoint gives a further 18.4% reduction to 26.6. For\ntopologically complex 3D mazes, a held-out, multi-seed study finds a\n20.2% mean reduction for GMG3D. Transfer is sharply scoped. Rotated\nanisotropy is negative in 3D on average, and the maze-trained network\nat its original rank is harmful on real Bentheimer micro-CT data.\nIncreasing rank and distilling separately on each real operator recovers\na 75.5% reduction relative to GMG3D, but still needs 2.1 times the AMG\niterations. Paired end-to-end timing with a separate operator-only\ncheckpoint shows no single-solve speedup over evolution AMG; repeated\nsolves only approach break-even. The representation complements classical\nsolver design rather than replacing it.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-74.pdf",
+    "video": null,
+    "openreview_id": "b3wqkcMnge",
+    "openreview_url": "https://openreview.net/forum?id=b3wqkcMnge"
+  },
+  {
+    "slug": "paper-75",
+    "title": "From Unlabeled Micrographs to 3D Structure: Self-Supervised Reconstruction with Score Models",
+    "authors": [
+      "Julian Leander Möbius",
+      "Michael Habeck"
+    ],
+    "abstract": "Single-particle cryo-electron microscopy (cryo-EM) aims to recover the 3D structure of biological macromolecules from large, noisy 2D micrographs. Each micrograph contains multiple particle projections at unknown positions and orientations, corrupted by the contrast transfer function and high noise levels. Standard cryo-EM pipelines rely on particle picking to extract candidate particles from micrographs, followed by a sequence of processing stages for alignment, classification, and 3D reconstruction. We introduce a self-supervised framework that removes the need for explicit particle picking by learning the distribution of random micrograph crops via denoising score matching. The learned score function is first used for fully self-supervised denoising through a Noisier2Noise estimator, producing noise-reduced micrographs without clean supervision. The score model is then fine-tuned on crops from these denoised micrographs to better capture underlying structural variability. At inference time, a user specifies a region of interest in a denoised micrograph, and a 3D volume is reconstructed using a score-distillation-based procedure. This approach replaces manual or heuristic particle picking in noisy or contrast-enhanced micrographs with a learned generative representation. We validate the method on two challenging simulated datasets and show that it can handle both conformational and compositional heterogeneity.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-75.pdf",
+    "video": null,
+    "openreview_id": "Xu1CKYFiOL",
+    "openreview_url": "https://openreview.net/forum?id=Xu1CKYFiOL"
+  },
+  {
+    "slug": "paper-77",
+    "title": "MLIP Embeddings Predict Extraordinary Material Properties",
+    "authors": [
+      "Luis Carretero López",
+      "Nofit Segal",
+      "Sathya Edamadaka",
+      "Rafael Gomez-Bombarelli"
+    ],
+    "abstract": "Extraordinary materials have properties beyond the range of typical training datasets, so discovering them requires predictors that can extrapolate past the labels they were trained on. Here, we test whether the representations learned by machine learning interatomic potentials (MLIPs) support this out-of-support (OOS) prediction. On seven crystal properties, we hold out the largest 5% of labels and compare a pretrained MLIP, probed or finetuned, against training from scratch and against two classical descriptors under the same predictor. Physics-based descriptors are the conventional choice for extrapolation and led earlier tests, yet we find that MLIP embeddings lead on OOS error on every task. Probed, they correctly identify a median 55% of the held-out materials, against 8% from scratch and 23% for the better descriptor, and their error falls faster with data. Finetuning aligns the property along the first principal component of the embeddings, and the pretraining prior extends that axis only a finite distance past the training range: within it the held-out materials stay ordered, beyond it they scatter into the training mass.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-77.pdf",
+    "video": null,
+    "openreview_id": "V4us6R7G96",
+    "openreview_url": "https://openreview.net/forum?id=V4us6R7G96"
+  },
+  {
+    "slug": "paper-79",
+    "title": "Learning hydrological error states for process-model correction",
+    "authors": [
+      "Hans Korving"
+    ],
+    "abstract": "End-to-end sequence models can jointly learn temporal aggregation, state representations and prediction, but the resulting hydrological state is often difficult to inspect. We revisit the Warren River residual-correction case of Hammad et al. (2026) and replace their prescribed dry/wet residual states with a task-informed representation learned using a vector-quantized variational autoencoder (VQ-VAE). The VQ-VAE yields both a continuous latent state and a set of recurrent discrete prototypes, and a generalized additive model (GAM) is used to predict the GR4J residual correction. The resulting GR4J–VQ-VAE–GAM model performs in the same range as the published state-dependent dual-LSTM correction. Adding the continuous latent representation to explicit predictors improves the GAM readout, with the clearest benefit at high flows. Discrete prototype identity contributes little additional predictive skill, although the prototypes themselves show distinct hydroclimatic profiles, residual distributions and temporal occupancy. We use this case to examine whether hydrological error state can be represented explicitly, inspected, and used for state-dependent correction.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-79.pdf",
+    "video": null,
+    "openreview_id": "6z2YL2LuKQ",
+    "openreview_url": "https://openreview.net/forum?id=6z2YL2LuKQ"
+  },
+  {
+    "slug": "paper-81",
+    "title": "Learning Sparse Functional Representations with Neural Operators",
+    "authors": [
+      "Bahareh Tolooshams",
+      "Ailsa Shen",
+      "Anima Anandkumar"
+    ],
+    "abstract": "Physical fields—vorticity, pressure, temperature—are continuous functions over spatial domains, often observed at varying resolutions and on irregular grids. Sparse Autoencoders (SAEs) have shown promise for learning structured representations, but their fixed-dimensional Euclidean parameterization ties concepts to specific discretizations and encodes only concept presence, making them poorly suited for this setting. We introduce sparse autoencoder neural operators (SAE-NOs), operating in function spaces instead. We formalize the functional representation hypothesis, modeling data as sparse compositions of structured functions, and instantiate it as Fourier neural operators with joint concept and domain sparsity. Concept sparsity selects which concepts are active; domain sparsity governs  where and how they are expressed. SAE-FNO learns localized concepts with stable structure across sparsity levels, reuses them across independently processed translated frames, and represents data with fewer effective concepts. Crucially, SAE-FNO generalizes to unseen resolutions where standard SAEs fail.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-81.pdf",
+    "video": null,
+    "openreview_id": "Oo3QzGmLSq",
+    "openreview_url": "https://openreview.net/forum?id=Oo3QzGmLSq"
+  },
+  {
+    "slug": "paper-84",
+    "title": "Rapid Generation of Antibody Conformational Ensembles Using Machine Learning",
+    "authors": [
+      "Pranav Rao",
+      "David Sommer",
+      "Darcy Davidson",
+      "Robert G Alberstein",
+      "Jan Ludwiczak",
+      "Joseph Kleinhenz",
+      "Bodhi P. Vani",
+      "Eliott Park",
+      "Jae Hyeon Lee",
+      "Saeed Izadi",
+      "Richard Bonneau",
+      "Sai Pooja Mahajan",
+      "Andrew Martin Watkins",
+      "Frederic A Dreyer"
+    ],
+    "abstract": "We introduce Cadense, a generative framework for antibody ensemble prediction\nthat produces diverse Fv structures from sequence, informed by conformational\ndynamics. While a valuable resource, static structure prediction provides only a\nsingle snapshot of dynamic proteins, whose motions influence their binding and\nother properties. This is particularly relevant for antibodies, an important\nclass of molecules for drug discovery, where flexible complementarity\ndetermining region (CDR) loops are difficult to model with static approaches.\nCadense addresses this gap by generating ensembles that match conformational and\nbiophysical property distributions from molecular dynamics (MD), while reducing\nthe computational burden from days of simulation to seconds of generation. We\nshow Cadense ensembles can recover both apo and holo\nconformations of the same antibody and serve as effective input to\nphysics-based docking, capturing the conformational flexibility important to\nproperly model antibody--antigen interactions.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": null,
+    "video": null,
+    "openreview_id": "uGJDSta0gl",
+    "openreview_url": "https://openreview.net/forum?id=uGJDSta0gl"
+  },
+  {
+    "slug": "paper-85",
+    "title": "ARENA: Active Region attENtion Aggregation for interpretable solar flare prediction",
+    "authors": [
+      "Luis Bauer",
+      "Annalena Kofler",
+      "Andrés Asensio Ramos",
+      "Aparna V.",
+      "Valentin Martinez Pillet",
+      "Bernhard Schölkopf"
+    ],
+    "abstract": "Predicting solar flares is a challenging space-weather forecasting problem with potentially significant impacts on Earth's upper atmosphere, including disruptions to radio communications.\n    We propose Active Region attENtion Aggregation~(ARENA), a neural network architecture that predicts solar flares from a variable number of active-region cutouts while learning to identify the region most relevant to the prediction.\n    ARENA is trained using multiple-instance learning under weak supervision, requiring only a flare/no-flare label for the observation and no labels specifying the flare origin.\n    The learned attention mechanism therefore provides a means of localizing the active region driving the prediction without explicit origin annotations.\n    ARENA achieves a heidke skill score of 0.45 which is comparable to other flare prediction approaches.\n    These results demonstrate that active-region-based aggregation can provide an efficient and interpretable approach to solar flare prediction. \nCode is available under\nhttps://github.com/LuisBauer22/ARENA.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-85.pdf",
+    "video": null,
+    "openreview_id": "974lIpQf7K",
+    "openreview_url": "https://openreview.net/forum?id=974lIpQf7K"
+  },
+  {
+    "slug": "paper-90",
+    "title": "Inducing Mixture Consistency in Nonlinear Aerosol Set Encoders by Training",
+    "authors": [
+      "Devon Maywald",
+      "Peter A. Bosler",
+      "Nicole Riemer",
+      "Matthew West",
+      "Lekha Patel"
+    ],
+    "abstract": "Linear aerosol operations such as mixing and spatial coarse-graining require latent representations that commute with population addition. Scale--shape encoders guarantee this property by design; we test whether it can instead be induced in a Deep Sets encoder whose nonlinear outer map breaks mixture consistency. We train with separate representation-level consistency and mixture-output losses on particle-resolved aerosol populations evaluated in 64-way mixtures. For every tested nontrivial training arity, the consistency loss reduces the median encoder gap from $10^6$--$10^7$ to approximately $10^{-7}$, a relative gap at double-precision roundoff, and the learned outer map is affine to within roundoff at sampled convex mixtures. Mixture-output training reduces diagnostic error for both nonlinear and linear-by-construction encoders, which track closely. These results show that training can retrofit empirical mixture consistency into a nonlinear encoder, although architectural linearity remains preferable when an exact guarantee is available.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-90.pdf",
+    "video": null,
+    "openreview_id": "QxHehu630g",
+    "openreview_url": "https://openreview.net/forum?id=QxHehu630g"
+  },
+  {
+    "slug": "paper-91",
+    "title": "How Does Distribution Shift Shape Pretraining Gains in Neural PDE Surrogates?",
+    "authors": [
+      "Pochinapeddi Sai Bhargav",
+      "Nithin Somasekharan",
+      "Rohit Sunil Kanchi",
+      "Sicheng He",
+      "Shaowu Pan"
+    ],
+    "abstract": "Pretraining a neural PDE surrogate can reduce the amount of new CFD data needed when geometry or modeled physics changes. However, it remains unclear how different components of distribution shift affect this benefit. We pretrain a surrogate on 254,909 RANS solutions from one airfoil family and fine-tune it on a new family under two target settings with matched freestream ranges: the same Spalart–Allmaras (SA) modeling and SA with added eᴺ transition modeling. At N = 1000, the pretrained model matches the accuracy of a model trained from scratch on 3.26× as many samples for the same-SA target, but 2.58× as many for the transition-modeled target. By N = 5000, this ordering reverses (1.55× versus 1.87×). At N = 1000, sampling more distinct airfoils lowers error on both targets, but only for the same-SA target is the gain increase larger than the observed draw-to-draw variation (3.3× to 4.0×). These results show that pretraining value depends jointly on target-data budget, target-data coverage, and whether source and target differ in modeled physics.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-91.pdf",
+    "video": null,
+    "openreview_id": "iwLyF2CTdA",
+    "openreview_url": "https://openreview.net/forum?id=iwLyF2CTdA"
+  },
+  {
+    "slug": "paper-92",
+    "title": "Self-Supervised Pretraining for Instrument-Robust Representations of Scattering Data",
+    "authors": [
+      "Darin Merchant",
+      "Nofit Segal",
+      "Miguel Steiner",
+      "Rafael Gomez-Bombarelli"
+    ],
+    "abstract": "Machine learning models for scattering data are typically trained on simulation because labeled measurements are scarce. However, instrument effects absent from the simulation cause these models to transfer poorly to measurements. Existing approaches learn task-specific robustness to these effects during supervised training that must be relearned for every facility and labeled dataset. Here, we pretrain an encoder self-supervised on a large dataset of pairs of spectra that share a structure and differ in instrument parameters. Pretraining this way yields a representation in which structural targets remain linearly readable when the training spectra come from a different instrument or material class than the test set, and when labels are few. In the regime that experimental pair distribution function analysis occupies, with few labels and heterogeneous instruments, a frozen encoder and a closed-form probe outperform supervised training. Fine-tuning, where labels permit it, adds accuracy at some cost in robustness. One pretrained encoder serves every task, pointing toward the possibility to train a foundation model for scattering data.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-92.pdf",
+    "video": null,
+    "openreview_id": "de9gVADgNp",
+    "openreview_url": "https://openreview.net/forum?id=de9gVADgNp"
+  },
+  {
+    "slug": "paper-94",
+    "title": "Do Tabular Foundation Models Know Physics? Contamination, Units, and the Deterministic Limit",
+    "authors": [
+      "Wassim Tenachi",
+      "Yashar Hezaveh",
+      "Laurence Perreault-Levasseur",
+      "Pierre-Luc Bacon"
+    ],
+    "abstract": "Tabular foundation models (TFMs) learn to fill in tables the way language models fill in text --- and tables are arguably the format in which most physical measurement arrives. Did they learn any physics in the process? They are Bayesian by construction, so the question is what their prior contains. We probe it directly, evaluating four of them ($\\texttt{TabPFN-3}$, $\\texttt{TabICLv2}$, $\\texttt{TabDPT}$ and $\\texttt{Real-TabPFN-2.5}$) against six baselines on datasets sampled from 316 physical equations, in and out of domain. TFMs dominate, out of the box and after tuning. But they struggle to represent noiseless deterministic mechanisms in their uncertainty, and show no sign of exploiting physical units: they interpolate physics without yet being able to act as physical models.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-94.pdf",
+    "video": null,
+    "openreview_id": "LS6uKGEX5s",
+    "openreview_url": "https://openreview.net/forum?id=LS6uKGEX5s"
+  },
+  {
+    "slug": "paper-96",
+    "title": "CURTAIN: Towards a Foundation Model for Neutrino Telescopes",
+    "authors": [
+      "Severin Magel",
+      "Felix J. Yu",
+      "Carlos A. Argüelles"
+    ],
+    "abstract": "Neutrino telescopes record more than a trillion photon detections per year, yet there does not exist a \\gls{ssl} task which fully satisfies all three conditions: improving as the pretraining set grows, transferring to a different detector, and outperforming the best model trained without pretraining at all. We introduce \\textbf{\\texttt{CURTAIN}}, a temporal masking scheme and the first \\gls{ssl} task for neutrino telescopes that achieves all of these goals. Downstream performance monotonically improves with the number of pretraining events, as predicted by scaling laws. Our encoder builds on \\texttt{DeepIce}, currently the leading model on the NuBench benchmarks direction reconstruction task. Pretraining it with \\texttt{CURTAIN} reduces its median angular error by $45\\,\\%$ and its median energy error by $31\\,\\%$ compared to training from scratch. It also transfers to a detector geometry never seen in pretraining, reducing the median angular error by $36\\,\\%$ compared to training from scratch. At matched capacity and pretraining data, \\texttt{CURTAIN}-pretrained encoders beat those pretrained by existing \\gls{ssl} tasks on both tasks and at every pretraining set size.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-96.pdf",
+    "video": null,
+    "openreview_id": "aWC1Fs0W0I",
+    "openreview_url": "https://openreview.net/forum?id=aWC1Fs0W0I"
+  },
+  {
+    "slug": "paper-97",
+    "title": "Learning Lattice Variables for Matrix-Free Wilson-Dirac Preconditioning in Lattice QCD",
+    "authors": [
+      "Adam Shaw",
+      "Srinivas Eswar",
+      "Sherry Li",
+      "Yang Liu",
+      "Phiala Shanahan",
+      "William Detmold",
+      "Yixuan Sun"
+    ],
+    "abstract": "Solving large, sparse, and ill-conditioned linear systems dominates the computational cost of lattice quantum chromodynamics (LQCD). Preconditioners effectively accelerate the convergence of iterative solvers but generally need careful design and tuning. This work develops an encoder--representation--decoder framework to produce a matrix-free neural preconditioner for the Wilson-Dirac operator. The encoder maps the gauge configuration $U$ to a representation $V$, which the decoder turns into a Hermitian positive-definite (HPD) preconditioner $M^{-1}$ for the Krylov solver. Because the representation consists of matrix-valued lattice fields, the decoder is assembled from lattice operators and never forms the actual preconditioning matrix---a computationally prohibitive operation for typical systems. No learned quantity in either the encoder or the decoder is tied to the lattice volume, so a trained encoder--decoder pair applies unchanged at any lattice size. Across four encoders and four decoders, we train the framework using gauge configurations of lattice size $L^4=8^4$ against the unrolled preconditioned Conjugate Gradient (PCG) objective and show that the generated preconditioners effectively reduce the number of iterations required for convergence, achieving a 7.8$\\times$ reduction compared to the unpreconditioned case. In addition, we directly apply the trained encoder--decoder pairs to a larger system of $L^4=16^4$, where the convergence behavior and relative ordering are preserved ($\\sim$8$\\times$ iteration reduction) without retraining.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-97.pdf",
+    "video": null,
+    "openreview_id": "UuEExDoKS2",
+    "openreview_url": "https://openreview.net/forum?id=UuEExDoKS2"
+  },
+  {
+    "slug": "paper-102",
+    "title": "Separability Is Not Alignability: Representations for Spectrum-to-Molecule Retrieval",
+    "authors": [
+      "Karol Musielinski",
+      "Fanurs C.E. Teh",
+      "Takahiko Koyama",
+      "Artur Dubrawski"
+    ],
+    "abstract": "Identifying a small molecule from its tandem mass spectrum is limited by paired data.\nFoundation models offer a way around this scarcity: pretrain a spectrum encoder on unlabeled\nspectra and a molecule encoder on a large corpus of structures, then align the two frozen\nrepresentations, as in vision-language and as the Platonic\nRepresentation Hypothesis suggests. We audit this route on MassSpecGym with spectrum encoders retrained\nfree of test-fold contamination. Alignment needs a metric relating distinct molecules, but the\nobjectives that produce spectrum encoders never see molecular structure: we prove that\nsome predictive objectives fix molecular identity without fixing\nthat metric. Moreover, we find that a candidate-based objective\nrewards a spectrum-independent prior over the benchmark's decoys, which we isolate.\nWhat ultimately addresses data scarcity is not architectural: simulated spectra surpass frozen geometry.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-102.pdf",
+    "video": null,
+    "openreview_id": "kqgbNulQ8A",
+    "openreview_url": "https://openreview.net/forum?id=kqgbNulQ8A"
+  },
+  {
+    "slug": "paper-103",
+    "title": "A Multitask Protein Language Model For Protein Property and Protein-Protein Interactions",
+    "authors": [
+      "Sukanya Sasmal",
+      "Robert Jiang",
+      "Sharmi Banerjee",
+      "Ahmed Ismail",
+      "Hoda Akl",
+      "Pete Bowry",
+      "Marcus D. Collins",
+      "Karla-Luise Herpoldt",
+      "HAMID MOHAMADI",
+      "Athanasios Nikolakopoulos",
+      "Divyajyoti Panda",
+      "Gherman Uritskiy",
+      "Derric Williams",
+      "Mostafa Karimi",
+      "Bella Dubrov",
+      "Shang Shang"
+    ],
+    "abstract": "Protein language models (PLMs) are typically pre-trained on single sequences, yet many downstream applications require understanding protein-protein interactions (PPIs). We present ProPRINT, a 3B-parameter T5 encoder-decoder model jointly pre-trained on single-sequence inpainting and a novel pair inpainting objective that reconstructs masked residues of one protein conditioned on its interacting partner, using PPI data from StringDB (experimentally validated interactions) and SynthPPI (74.6M synthetic interacting domain pairs derived from the AlphaFold Protein Structure Database). For SynthPPI, we introduce a contact-aware masking strategy that preferentially masks binding-interface residues, integrating structural information into sequence-only models. ProPRINT-3B outperforms ESM2 models up to 3B and MINT on two of five PPI benchmarks and four of eight single-sequence benchmarks, showing that PPI-augmented pre-training enhances representation learning without sacrificing single-sequence representation quality.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-103.pdf",
+    "video": null,
+    "openreview_id": "N4QBh7oFEv",
+    "openreview_url": "https://openreview.net/forum?id=N4QBh7oFEv"
+  },
+  {
+    "slug": "paper-104",
+    "title": "Duhamel Neural Operator for Learning Phase-Field Dynamics",
+    "authors": [
+      "Matthew Ju",
+      "Yingheng Tang",
+      "Kangan Wang",
+      "Haozhi Sha"
+    ],
+    "abstract": "Phase-field simulators are used to predict how polarization fields evolve, a task that has been challenging due to their high computational cost. Machine learning surrogates have quicker inference times, but tend to struggle in approximating the amplification of incubation noise. We introduce the Duhamel Neural Operator (Duhamel-NO), a neural operator architecture consisting of a Fourier state-space model and a next-step U-Shaped Neural Operator, whose update is built on Duhamel’s principle applied to the Time-Dependent Ginzburg–Landau (TDGL) theory. Duhamel-NO reproduces the reference solver’s (FERROX) trajectories up to three orders of magnitude faster while exhibiting the most physically consistent predictions and significantly lower error than the best of seven tuned baselines, achieving a near-perfect correlation zero-shot generalization on unseen materials, initializations, and free energy landscapes. Additionally, we construct an open benchmark for ferroelectric phase-field dynamics.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-104.pdf",
+    "video": null,
+    "openreview_id": "HQBIop1iC9",
+    "openreview_url": "https://openreview.net/forum?id=HQBIop1iC9"
+  },
+  {
+    "slug": "paper-105",
+    "title": "Generalizing Equivariant Neural Networks for Protein–Ligand Binding by Comparing Atomic Environments",
+    "authors": [
+      "Ryan Wong",
+      "Chetan Rupakheti",
+      "Abhishek Pandey",
+      "Arvind Ramanathan",
+      "Risi Kondor"
+    ],
+    "abstract": "Structure-based models of protein–ligand binding affinity have long been benchmarked by training on PDBbind and testing on CASF-2016, a train/test split in which nearly half of the test complexes have close analogs in the training data. Many recent models developed on splits that remove these analogs rely on pretrained embeddings. We ask what additional inductive biases should be built into an equivariant message passing network (MPNN) trained from scratch, and focus on how the network can use the unbound state of a complex. In a basic equivariant MPNN, adding the unbound state as a second pooled input does not improve accuracy. Because the two states contain the same atoms, their embeddings can instead be combined at each atom, at each intermolecular edge and over the pocket, through operations we refer to as paired readouts. The resulting model, PEAR, is to our knowledge the most accurate model on CASF-2016 when trained on CleanSplit, including models with pretrained embeddings. Furthermore, a variant of PEAR, PEAR_LBA, matches the best reported accuracy on ATOM3D LBA at 30% sequence identity. On seven held-out pocket clusters, a residue-scale variant, PEAR_residue, has the highest average correlation of any single model after finetuning on 25 complexes of each target. When developing PEAR, we were additionally inspired by the fact that binding affinity is an ensemble average over configurations, so that a model should not lean too heavily on the exact coordinates of its input structure. We find that PEAR is the most accurate atom-scale model under coordinate noise perturbation, and that PEAR_residue degrades about half as much under the same perturbation.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-105.pdf",
+    "video": null,
+    "openreview_id": "Y3MRqy08Gv",
+    "openreview_url": "https://openreview.net/forum?id=Y3MRqy08Gv"
+  },
+  {
+    "slug": "paper-106",
+    "title": "Metamorphic testing of learned AC optimal power flow surrogates reveals representation dependence",
+    "authors": [
+      "Stephen Peng",
+      "Vineet Jagadeesan Nair"
+    ],
+    "abstract": "Changing bus order or an angle reference leaves the AC optimal power flow (AC-OPF) problem unchanged, but can change a learned surrogate's prediction. We test this dependence with thirteen metamorphic relations, each specifying when a transformation is valid and how to compare its outputs. Our screen covers 17 configurations: two released trained checkpoints and 15 random-weight architecture or mechanism controls. Every configuration fails at least six relations, including at tolerances ten times tighter or looser. For \\texttt{GridSFM-Open v1.1}, source inspection and intermediate-tensor tests point to an indexing bug and three preprocessing choices; a repaired checkpoint remains untested. In a separate case500 experiment, augmentation reduces transformed-input error in three of four models and median discrepancy and constraint-violation P95 in all four. Most of the large Laplacian-model accuracy gain comes from a GPU/CPU eigensolver mismatch. Some relations worsen, and every evaluated prediction remains AC infeasible. Evaluating multiple encodings exposes failures that accuracy and feasibility scores on one encoding can miss. These results show why evaluations of learned physical surrogates should test consistency across equivalent representations alongside accuracy, optimality, and feasibility. For learned power-grid models, including foundation-model checkpoints, these are the criteria by which foundation-model claims should be evaluated under realistic conditions.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-106.pdf",
+    "video": null,
+    "openreview_id": "yAjSsdFWV3",
+    "openreview_url": "https://openreview.net/forum?id=yAjSsdFWV3"
+  },
+  {
+    "slug": "paper-109",
+    "title": "Electro-Prot: Learning Protein Representations from Electrostatics",
+    "authors": [
+      "Paula Sharoubeem",
+      "Sumeet Kothare",
+      "Jacky Chen",
+      "David Ryan Koes"
+    ],
+    "abstract": "Protein Language Models (PLMs) trained on sequence, as well as structure-aware variants that integrate structural information, have emerged as powerful tools to learn protein representations applicable to a wide range of downstream tasks. However, neither of these frameworks explicitly accounts for the electrostatic interactions that govern protein functions. We investigate whether a continuous electrostatic field can serve as a pretraining target to encode general protein representations. We present Electro-Prot, a 6.7 million-parameter encoder-decoder transformer model trained to predict Poisson-Boltzmann electrostatic potentials at arbitrary points around a protein. Coordinate queries cross-attend to atoms to predict the electrostatic potential as a continuous field. Electro-Prot attains $r=0.97$ (MAE = 0.81 kT/e) on a held-out test set. On downstream tasks, EP achieves the highest reported mean Protein-Protein Interaction AUROC among the evaluated standalone representations whereas, SaProt performs better on structural similarity and binding-site prediction, while the binding-affinity comparisons are mixed. PLMs remain stronger on GO, and protein family classification. Combining Electro-Prot and PLM embeddings improves results in structure similarity, protein-protein interface, Gene Ontology, and binding site detection, suggesting that Electro-Prot learns a complementary signal not captured in evolutionary statistics. Our results suggest that electrostatic pretraining provides a viable, parameter- and data- efficient signal for learning representations relevant to interaction-centric tasks.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-109.pdf",
+    "video": null,
+    "openreview_id": "XC4wNzSNiS",
+    "openreview_url": "https://openreview.net/forum?id=XC4wNzSNiS"
+  },
+  {
+    "slug": "paper-110",
+    "title": "In-distribution skill does not diagnose transfer: a controlled ocean testbed for scientific representations",
+    "authors": [
+      "Huan Zhang"
+    ],
+    "abstract": "Scientific representations are commonly selected by in-distribution predictive accuracy, but this need not determine transfer after physical regime change. We compare four data-driven predictors of the same five-channel North Atlantic ocean state: Euclidean and spatially regularized regression, low-rank EOF/POP dynamics, and a nonlinear latent dynamical emulator. \nAll are trained on preindustrial control data and evaluated at 1-, 5-, and 10-year leads under historical and SSP3-7.0 forcing. Their in-distribution and out-of-distribution rankings are reversed: the nonlinear emulator is modestly worse on preindustrial test data at long leads but generalizes best after a late-century reorganization marked by near-suppression of Labrador Sea deep convection. POP is intermediate, while direct regressions fail most strongly. Attribution analysis suggests that state-evolution objectives preserve multivariate physical relationships weakly constrained by the scalar prediction task but relevant after regime change. These results motivate evaluating scientific representations across physically meaningful dynamical shifts, not only held-out samples from the training regime. These results suggest when both regimes cannot be sampled, predictors should preserve generalizable physical mechanisms and extrapolate along a physically plausible manifold.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-110.pdf",
+    "video": null,
+    "openreview_id": "mg4ZUgioZd",
+    "openreview_url": "https://openreview.net/forum?id=mg4ZUgioZd"
+  },
+  {
+    "slug": "paper-112",
+    "title": "Probabilistic probes of AION: X-ray prediction and within-object correlations",
+    "authors": [
+      "Rocco Di Tella",
+      "Carolina Cuesta-Lazaro",
+      "Jason R. Reeves",
+      "Rebeka L. Böttger",
+      "Juan Rafael Martínez-Galarza"
+    ],
+    "abstract": "AION-1 is a multimodal foundation model for astrophysics pretrained on optical and infrared datasets, but not on X-ray observations, which crucially inform black hole accretion physics. We use AION's frozen encoder to measure the amount of information that the resulting representation carries about X-ray phenomena, and use the results to explore scaling relations between black hole accretion, gas dynamics, and star formation rate. A trained CLS token pools information throughout the frozen forward pass, and normalizing-flow heads on that summary yield posteriors over X-ray properties from optical spectra, images, mid-infrared photometry and redshift. The four-modality model outperforms a classical emission-line baseline on every attempted target (flux information gain 0.299 vs.\\ 0.197 nats). Using modality dropout we also measure the information contained in each of the 15 input combinations. A joint posterior over the X-ray band rates, star formation rate and stellar mass yields composite targets the model was not explicitly trained on: specific star formation rate and a hardness ratio. The within-object posterior correlation between those two properties is studied as a potential tracer of active galactic nucleus (AGN) feedback as a mechanism for quenching star formation in galaxies.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": null,
+    "video": null,
+    "openreview_id": "5dGDk7bEiV",
+    "openreview_url": "https://openreview.net/forum?id=5dGDk7bEiV"
+  },
+  {
+    "slug": "paper-113",
+    "title": "Improving GNN-Based Multiple Scattering Simulation with Error-Driven Adaptive Edge Sampling",
+    "authors": [
+      "Rémi Marsal",
+      "Stéphanie Chaillat",
+      "Alexandre Chapoutot"
+    ],
+    "abstract": "Recently, learning-based approaches allow very fast simulation of multiple scattering phenomena, i.e., the interactions between a field and several obstacles.\nThey integrate a graph neural network (GNN) into the boundary element method framework (BEM), benefiting from the computational efficiency of the former and the reduction of the problem's dimensionality from the latter.\nThus, the GNN estimates the solution of the boundary integral equation (BIE) on the discretized obstacle surface before applying the boundary integral representation to recover the full solution of the multiple scattering problem.\nWhile the scattered field depends on the dense graph of interactions, only a subset can be modeled by the GNN to keep the method tractable.\nIn this paper, we introduce a new GNN architecture for simulating multiple scattering phenomena that leverages an error-driven Adaptive Edge Sampling mechanism for selecting the interactions to model based on intermediate predictions of the expected error per node.\nExtensive experiments demonstrate that our approach improves the estimation of the BIE solution.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-113.pdf",
+    "video": null,
+    "openreview_id": "eaE8MxUAIe",
+    "openreview_url": "https://openreview.net/forum?id=eaE8MxUAIe"
+  },
+  {
+    "slug": "paper-114",
+    "title": "Plausible States Are Not Plausible Trajectories: Self-Supervised Objectives for Chaotic Dynamics",
+    "authors": [
+      "Ramon Daniel Regueiro-Espino",
+      "Jorge Mifsut Benet",
+      "Nicolas THOME",
+      "Patrick Gallinari"
+    ],
+    "abstract": "Forecasting provides a natural self-supervised objective for learning models of dynamical systems. For chaotic systems, however, individual trajectories become unpredictable beyond a finite predictability horizon, and plausible states need not form plausible trajectories. Beyond this horizon, the objective should shift from predicting a particular future to generating trajectories that preserve both the statistics of physical states and their temporal evolution. We study this as an objective-design problem using a Jump-and-Complete framework that factorizes trajectory generation into two stochastic tasks: a Jumper samples plausible distant endpoints, and a Completer generates the paths connecting the observed context to those endpoints. Both are trained with the Energy Score and evaluated with state- and path-space diagnostics. On 2D Kuramoto-Sivashinsky and Kolmogorov flow, we first show that, past the predictability horizon, pointwise errors fail to distinguish models with very different temporal behavior. We then show that two seemingly auxiliary design choices shape the learned trajectory distribution. First, training the Completer on Jumper-sampled rather than exact endpoints changes which temporal statistics of composed rollouts are matched on Kolmogorov flow. Second, sharing one latent draw across a trajectory preserves temporal dependence better than resampling noise at each time, despite an equal or better Energy Score. Thus, for stochastic trajectory learning, the effective objective is determined not only by the loss, but also by what the model is conditioned on during training and how randomness is shared across time.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-114.pdf",
+    "video": null,
+    "openreview_id": "8c7kOOsJw3",
+    "openreview_url": "https://openreview.net/forum?id=8c7kOOsJw3"
+  },
+  {
+    "slug": "paper-115",
+    "title": "SO(3)-RoPE for Spherical Transformers",
+    "authors": [
+      "Christian Libner",
+      "Chase van de Geijn",
+      "Alexander S. Ecker",
+      "Maurice Weiler"
+    ],
+    "abstract": "Many scientific domains produce data that lives on the sphere.\nMost spherical transformer architectures violate the spherical geometry,\nintroducing distortions and coordinate singularities at the poles.\nWe develop a RoPE-like position embedding, depending only on relative spherical locations.\nThey act via unitary SO3 representations and lead to SO3-equivariant attention.\nOur SO3-RoPE is compatible with FlashAttention and thus retains the throughput and memory efficiency of vanilla transformers.\nWe evaluate our method on a shallow water dynamics prediction task on a rotating sphere.\nIt outperforms an S2Transformer baseline while having lower wall-clock time.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-115.pdf",
+    "video": null,
+    "openreview_id": "TBthm8lphb",
+    "openreview_url": "https://openreview.net/forum?id=TBthm8lphb"
+  },
+  {
+    "slug": "paper-116",
+    "title": "Distilling Dark Matter Halo Profiles: Symbolic Regression on Rotation Curve Data",
+    "authors": [
+      "Hugo Robijns",
+      "Adil Soubki",
+      "Miles Cranmer"
+    ],
+    "abstract": "Rotation curves of spiral galaxies directly probe the underlying dark matter halo structure, yet no halo profile model universally describes the diversity observed across galaxies. We use symbolic regression applied to the Spitzer Photometry \\& Accurate\nRotation Curves (SPARC) database to distil a new family of dark matter halo velocity profiles directly from observational data. The resulting expression is parameterised by an amplitude $c$, dimensionless radial coordinate $x$, and a galaxy-specific shape parameter $\\gamma$.\nTo formally evaluate performance, we fit the new profile, alongside seven established literature profiles, to SPARC using Markov Chain Monte Carlo (MCMC) methods. Trained on a subset of 115 galaxies from the 175-galaxy sample, the profile achieves good fits, as defined by a reduced chi-squared statistic $\\chi^2_\\nu<2$, on 81\\% of the out-of-distribution test sample and 76\\% of the full SPARC sample, outperforming all comparison profiles. We interpret the model physically, and quantify the correlation between the model parameters and observable galaxy properties, thereby exploring the link between dark matter halo structure and galaxy morphology. The results demonstrate the potential of symbolic regression as a tool for data-driven discovery in galactic dynamics.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": null,
+    "video": null,
+    "openreview_id": "SWE7SpQ41t",
+    "openreview_url": "https://openreview.net/forum?id=SWE7SpQ41t"
+  },
+  {
+    "slug": "paper-120",
+    "title": "Which Physical Symmetries Can Be Imposed by Averaging?",
+    "authors": [
+      "Raunav Mendiratta",
+      "Aiden Seungchan Lee",
+      "Palaash Gang"
+    ],
+    "abstract": "Averaging a trained model over a compact symmetry group makes it invariant, and when the data share the symmetry the averaged model is no worse than the original under a convex loss. Many symmetries of physical systems, such as translations, Lorentz boosts and changes of units, form non-compact groups, so the average must be restricted to a bounded set of group elements, usually a ball around the identity. We study what this truncation preserves. For connected Lie groups, ball averages become invariant for every bounded model if and only if the volume of balls grows polynomially. Under exponential growth, as for the Lorentz group, they do not, and the average is governed by the values of the model at the cutoff. In addition, no data distribution is invariant under a non-compact group that moves inputs arbitrarily far, as translations and boosts do. The guarantee that averaging does not increase the risk is then lost, as an exact counterexample and a trained top-quark tagger show. Amenability decides neither question. It decides only whether some other sequence of sets makes the average invariant, and we construct such sets for the affine and similarity groups.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-120.pdf",
+    "video": null,
+    "openreview_id": "lp7wME0zs9",
+    "openreview_url": "https://openreview.net/forum?id=lp7wME0zs9"
+  },
+  {
+    "slug": "paper-131",
+    "title": "A Catalog-Free Spatio-Spectral Representation of the Sky",
+    "authors": [
+      "Georgios N. Vassilakis",
+      "Miles Cranmer",
+      "Vasily Belokurov"
+    ],
+    "abstract": "Astronomical surveys observe the same sky through instruments with different bandpasses, point-spread functions, apertures, and noise properties, and standard coaddition offers no way to combine a fiber spectrum with a broadband image. We model the sky as a single continuous spectral surface-brightness field, fit directly to calibrated single-epoch measurements, each modeled as an integral of the field against its instrument's own measurement kernel (astrometry, PSF or line-spread function, bandpass or wavelength bin, and aperture). An implementation with $9.2\\times10^6$ anisotropic Gaussian components and 32 shared nonnegative spectral templates jointly fits 405 SDSS exposures and 889 SDSS/BOSS fiber spectra over an $84'\\times84'$ COSMOS field without an external source catalog. The in-sample forward model recovers integrated source flux in these fibers, with the known sky subtracted, to 5.5\\% median absolute fractional error. We then omit complete exposures from optimization, initialization, and component lifecycle, retain other bands and spectra as same-sky conditioning, and synthesize the omitted frames through their recorded operators. In four holdouts with more than 70\\% of the footprint lacking same-band coverage, hole-region flux ratios range from 0.71 to 1.86, versus 0.90--1.06 for matched in-sample controls. Coverage stratification separates supported from unsupported synthesis and localizes the failures. The result is both a scalable shared representation and a falsifiable protocol for testing observation-operator transfer.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": null,
+    "video": null,
+    "openreview_id": "PkjlsDKqCE",
+    "openreview_url": "https://openreview.net/forum?id=PkjlsDKqCE"
+  },
+  {
+    "slug": "paper-133",
+    "title": "GyroSplat: A Linear Representation of Fusion Plasma Turbulence with Direct and Differentiable Physics",
+    "authors": [
+      "Gerald Gutenbrunner",
+      "Gianluca Galletti",
+      "Andreas Radler",
+      "Fabian Paischer",
+      "Johannes Brandstetter"
+    ],
+    "abstract": "Gyrokinetic simulations model the plasma turbulence governing heat transport in magnetically confined fusion devices. These 5D simulations are computationally expensive and produce massive data volumes, with a single snapshot requiring tens of gigabytes of storage. This makes directly storing intermediate timesteps impractical and motivates the use of (lossy) compression. Recent neural compression approaches achieve favorable rate–distortion trade-offs by augmenting conventional $L_2$ reconstruction objectives with physics-informed losses that preserve derived quantities such as the electrostatic potential and heat flux. However, neural network based representations can be difficult to optimize and refine when additional constraints are imposed. We introduce GyroSplat, a compression method for gyrokinetic fields inspired by Gaussian splatting. GyroSplat represents each plasma field as a weighted sum of independent Gaussian–Gabor atoms, yielding a representation that is linear in its coefficients. This linearity enables a staged optimization strategy in which atoms are first fitted to minimize reconstruction error, then refined against the potential, and subsequently new atoms are added to correct the transport. Moreover, relevant derived quantities admit closed-form expressions in terms of the atom coefficients, enabling efficient refinement via a Gauss–Newton procedure. Experiments on gyrokinetic simulation data show that GyroSplat achieves improved trade-offs at matched storage over established compression baselines on derived physical quantities while remaining competitive on field reconstruction, and improving over state-of-the-art physics-informed compressors. These results demonstrate Gaussian splatting as an effective and flexible approach to high-fidelity compression of scientific simulation data.",
+    "presentation": {
+      "type": "oral",
+      "time": "TBD"
+    },
+    "pdf": "assets/papers/paper-133.pdf",
+    "video": null,
+    "openreview_id": "xZMuTU83eC",
+    "openreview_url": "https://openreview.net/forum?id=xZMuTU83eC"
+  },
+  {
+    "slug": "paper-134",
+    "title": "Anatomy of Rollout Error in Chaotic Flow Surrogates",
+    "authors": [
+      "Emma Gauillard",
+      "Armand Kassaï Koupaï",
+      "Etienne Meunier",
+      "Patrick Gallinari"
+    ],
+    "abstract": "Autoregressive neural surrogates for turbulent PDEs are typically evaluated by\nrollout RMSE against a reference trajectory. However, in chaotic flows, trajectories\noften decorrelate due to sensitivity to initial conditions, making pointwise predic-\ntion errors meaningless. We investigate how surrogate errors develop and what\naspects of the learned dynamics can still be evaluated beyond this predictability\nhorizon. We compare deterministic and generative surrogates on 2D Kolmogorov\nflow using a shared backbone, focusing on models whose rollouts remain bounded.\nOur analysis reveals three findings. First, errors emerge at fine spatial scales before\nlarge-scale trajectory decorrelation. Second, despite trajectory divergence, local\none-step errors measured against a numerical solver on model-generated states\nremain approximately constant with rollout depth. Third, one-step prediction ac-\ncuracy does not necessarily translate into accurate long-term state statistics. This\nhighlights the need to complement trajectory-based evaluation with measures of\nlocal dynamical accuracy and long-term statistical fidelity.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-134.pdf",
+    "video": null,
+    "openreview_id": "oHosBud86U",
+    "openreview_url": "https://openreview.net/forum?id=oHosBud86U"
+  },
+  {
+    "slug": "paper-135",
+    "title": "Task-Agnostic Self-Supervised Learning for Physical Dynamics",
+    "authors": [
+      "Biel Castaño Segade",
+      "Joceran Gouneau",
+      "Armand Kassaï Koupaï",
+      "Lise Le Boudec",
+      "Patrick Gallinari"
+    ],
+    "abstract": "Physics foundation models are commonly pretrained by forecasting future states, tying representation learning to a specific downstream task. We investigate whether self-supervised learning from partial observations can instead produce task-agnostic representations that capture the hidden dynamics of physical systems. Using a shared ViT backbone for heterogeneous 2D and 3D systems, we study masked reconstruction in physical space and JEPA-style prediction in latent space. To assess what these representations encode about the underlying dynamics, we freeze the encoder and measure how well governing physical parameters can be recovered from its features.\nTo explicitly target properties of the dynamical system that persist across an entire trajectory, we introduce \\emph{regime fingerprinting}, which exploits the fact that an early partial view and a broader view of the same trajectory are generated under the same physical regime, and trains their representations to remain identifiable across time. Combined with latent-space prediction, regime fingerprinting yields the strongest recovery of governing parameters in our experiments and compares favorably with forecasting-pretrained baselines. These results suggest that self-supervised learning can capture trajectory-level physical dynamics without using forecasting as a pretraining objective.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-135.pdf",
+    "video": null,
+    "openreview_id": "z1xKt69c65",
+    "openreview_url": "https://openreview.net/forum?id=z1xKt69c65"
+  },
+  {
+    "slug": "paper-138",
+    "title": "Grid, Set, or Graph? Representations for Learned VLBI Reconstruction Under Distribution Shift",
+    "authors": [
+      "Dmitrii Zagorulia"
+    ],
+    "abstract": "Radio interferometers measure complex visibilities at irregularly sampled spatial frequencies, with sampling patterns that vary between observations. We investigate how the representation of these measurements affects learned image reconstruction by comparing three approaches: a regular grid processed by a convolutional neural network (CNN), an unordered set processed by DeepSets, and a $k$-nearest-neighbour graph processed by a graph neural network (GNN). The models are trained to reproduce CLEAN images from Astrogeo X-band observations and evaluated without adaptation on the MOJAVE 15 GHz survey. The GNN achieves the lowest median normalized mean squared error (NMSE) on both held-out X-band observations (0.202, compared with 0.228 for DeepSets and 0.376 for the CNN) and MOJAVE (0.386, compared with 0.448 and 0.707). However, all three models exhibit similar relative increases in NMSE under the survey shift (88–96\\%), providing no clear evidence of differences in relative robustness. An oracle-scaled mean-image baseline outperforms all three models, while diagnostics on selected observations suggest that amplitude underprediction contributes substantially to the degradation on MOJAVE. Because the survey shift simultaneously changes observing frequency, array configuration, and source characteristics, these results do not isolate the effects of sampling geometry.",
+    "presentation": {
+      "type": "poster",
+      "session": "TBD"
+    },
+    "pdf": "assets/papers/paper-138.pdf",
+    "video": null,
+    "openreview_id": "wTW52si8Yg",
+    "openreview_url": "https://openreview.net/forum?id=wTW52si8Yg"
+  }
+]
