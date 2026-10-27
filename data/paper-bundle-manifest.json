@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-10-25T21:01:06.772321+00:00",
+  "generated_at_utc": "2026-10-27T10:54:11.366679+00:00",
   "papers": [
     {
       "submission_number": 1,
@@ -101,7 +101,9 @@
     {
       "submission_number": 28,
       "slug": "paper-28",
-      "pdf": null
+      "pdf": "assets/papers/paper-28.pdf",
+      "sha256": "03c1d4759b94efa76ca52ec708ab170d6f55fc266127081927dfbf9c73960410",
+      "source": "screened"
     },
     {
       "submission_number": 29,
