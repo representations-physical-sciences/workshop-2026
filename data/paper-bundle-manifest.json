@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-11-02T08:31:55.417963+00:00",
+  "generated_at_utc": "2026-11-02T10:24:25.100013+00:00",
   "papers": [
     {
       "submission_number": 1,
@@ -310,8 +310,8 @@
       "submission_number": 85,
       "slug": "paper-85",
       "pdf": "assets/papers/paper-85.pdf",
-      "sha256": "cc351f5f930411589249d5a7288e49fd72c00807512831e888d6265787338f0b",
-      "source": "screened"
+      "sha256": "c78cc578ed212529899acb44ab57373fe640a1ec4e46c0850a8ccce33f6ccf59",
+      "source": "replacement"
     },
     {
       "submission_number": 90,
