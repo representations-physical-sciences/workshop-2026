@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-10-27T10:54:11.366679+00:00",
+  "generated_at_utc": "2026-11-02T08:31:55.417963+00:00",
   "papers": [
     {
       "submission_number": 1,
@@ -150,7 +150,9 @@
     {
       "submission_number": 43,
       "slug": "paper-43",
-      "pdf": null
+      "pdf": "assets/papers/paper-43.pdf",
+      "sha256": "750f2c268364159cddddb4a216dc71f31bb106058fc93b6ed8d763774043c118",
+      "source": "replacement"
     },
     {
       "submission_number": 44,
